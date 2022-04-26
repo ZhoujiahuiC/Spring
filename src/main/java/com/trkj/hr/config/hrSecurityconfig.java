@@ -20,7 +20,7 @@ public class hrSecurityconfig extends WebSecurityConfigurerAdapter {
                 .withUser("general_manager")
                 .password(passwordEncoder.encode("123456"))
                 .roles("g1")
-                .authorities("c1")
+                .authorities("c")
                 .and()
                 .withUser("chairman")
                 .password(passwordEncoder.encode("123456"))
