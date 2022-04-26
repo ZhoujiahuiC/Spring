@@ -3,9 +3,7 @@ package com.trkj.hr.config;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
-import org.springframework.security.config.annotation.web.WebSecurityConfigurer;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
-import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
@@ -21,12 +19,12 @@ public class hrSecurityconfig extends WebSecurityConfigurerAdapter {
                 .inMemoryAuthentication()
                 .withUser("general_manager")
                 .password(passwordEncoder.encode("123456"))
-                .roles("")
+                .roles("g1")
                 .authorities("")
                 .and()
                 .withUser("chairman")
                 .password(passwordEncoder.encode("123456"))
-                .roles("")
+                .roles("c1")
                 .authorities("");
     }
     @Bean
