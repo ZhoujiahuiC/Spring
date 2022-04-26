@@ -1,47 +1,57 @@
 package com.trkj.hr.pojo;
 
+import java.util.Date;
+import java.io.Serializable;
 
-public class Bancibiao {
-
-  private long bcbh;
-  private String bcmc;
-  private java.sql.Date bckssj;
-  private java.sql.Date bcjssj;
-
-
-  public long getBcbh() {
-    return bcbh;
-  }
-
-  public void setBcbh(long bcbh) {
-    this.bcbh = bcbh;
-  }
-
-
-  public String getBcmc() {
-    return bcmc;
-  }
-
-  public void setBcmc(String bcmc) {
-    this.bcmc = bcmc;
-  }
+/**
+ * (Bancibiao)实体类
+ *
+ * @author makejava
+ * @since 2022-04-26 19:37:36
+ */
+public class Bancibiao implements Serializable {
+    private static final long serialVersionUID = -82468102055496925L;
+    
+    private Integer bcbh;
+    
+    private String bcmc;
+    
+    private Date bckssj;
+    
+    private Date bcjssj;
 
 
-  public java.sql.Date getBckssj() {
-    return bckssj;
-  }
+    public Integer getBcbh() {
+        return bcbh;
+    }
 
-  public void setBckssj(java.sql.Date bckssj) {
-    this.bckssj = bckssj;
-  }
+    public void setBcbh(Integer bcbh) {
+        this.bcbh = bcbh;
+    }
 
+    public String getBcmc() {
+        return bcmc;
+    }
 
-  public java.sql.Date getBcjssj() {
-    return bcjssj;
-  }
+    public void setBcmc(String bcmc) {
+        this.bcmc = bcmc;
+    }
 
-  public void setBcjssj(java.sql.Date bcjssj) {
-    this.bcjssj = bcjssj;
-  }
+    public Date getBckssj() {
+        return bckssj;
+    }
+
+    public void setBckssj(Date bckssj) {
+        this.bckssj = bckssj;
+    }
+
+    public Date getBcjssj() {
+        return bcjssj;
+    }
+
+    public void setBcjssj(Date bcjssj) {
+        this.bcjssj = bcjssj;
+    }
 
 }
+

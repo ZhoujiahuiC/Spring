@@ -1,87 +1,96 @@
 package com.trkj.hr.pojo;
 
+import java.io.Serializable;
 
-public class Yuangongbiao {
-
-  private long ybh;
-  private long bcbh;
-  private long rzbh;
-  private long zwbh;
-  private long sbbh;
-  private long ygzt;
-  private String yzh;
-  private String ymm;
-
-
-  public long getYbh() {
-    return ybh;
-  }
-
-  public void setYbh(long ybh) {
-    this.ybh = ybh;
-  }
-
-
-  public long getBcbh() {
-    return bcbh;
-  }
-
-  public void setBcbh(long bcbh) {
-    this.bcbh = bcbh;
-  }
+/**
+ * (Yuangongbiao)实体类
+ *
+ * @author makejava
+ * @since 2022-04-26 19:40:43
+ */
+public class Yuangongbiao implements Serializable {
+    private static final long serialVersionUID = 187441236550889902L;
+    
+    private Integer ybh;
+    
+    private Integer bcbh;
+    
+    private Integer rzbh;
+    
+    private Integer zwbh;
+    
+    private Integer sbbh;
+    
+    private Integer ygzt;
+    
+    private String yzh;
+    
+    private String ymm;
 
 
-  public long getRzbh() {
-    return rzbh;
-  }
+    public Integer getYbh() {
+        return ybh;
+    }
 
-  public void setRzbh(long rzbh) {
-    this.rzbh = rzbh;
-  }
+    public void setYbh(Integer ybh) {
+        this.ybh = ybh;
+    }
 
+    public Integer getBcbh() {
+        return bcbh;
+    }
 
-  public long getZwbh() {
-    return zwbh;
-  }
+    public void setBcbh(Integer bcbh) {
+        this.bcbh = bcbh;
+    }
 
-  public void setZwbh(long zwbh) {
-    this.zwbh = zwbh;
-  }
+    public Integer getRzbh() {
+        return rzbh;
+    }
 
+    public void setRzbh(Integer rzbh) {
+        this.rzbh = rzbh;
+    }
 
-  public long getSbbh() {
-    return sbbh;
-  }
+    public Integer getZwbh() {
+        return zwbh;
+    }
 
-  public void setSbbh(long sbbh) {
-    this.sbbh = sbbh;
-  }
+    public void setZwbh(Integer zwbh) {
+        this.zwbh = zwbh;
+    }
 
+    public Integer getSbbh() {
+        return sbbh;
+    }
 
-  public long getYgzt() {
-    return ygzt;
-  }
+    public void setSbbh(Integer sbbh) {
+        this.sbbh = sbbh;
+    }
 
-  public void setYgzt(long ygzt) {
-    this.ygzt = ygzt;
-  }
+    public Integer getYgzt() {
+        return ygzt;
+    }
 
+    public void setYgzt(Integer ygzt) {
+        this.ygzt = ygzt;
+    }
 
-  public String getYzh() {
-    return yzh;
-  }
+    public String getYzh() {
+        return yzh;
+    }
 
-  public void setYzh(String yzh) {
-    this.yzh = yzh;
-  }
+    public void setYzh(String yzh) {
+        this.yzh = yzh;
+    }
 
+    public String getYmm() {
+        return ymm;
+    }
 
-  public String getYmm() {
-    return ymm;
-  }
-
-  public void setYmm(String ymm) {
-    this.ymm = ymm;
-  }
+    public void setYmm(String ymm) {
+        this.ymm = ymm;
+    }
 
 }
+

@@ -1,47 +1,56 @@
 package com.trkj.hr.pojo;
 
+import java.io.Serializable;
 
-public class Mianshiguizhanzibiao {
-
-  private long mzbh;
-  private long mbh;
-  private long ybh;
-  private String mzwt;
-
-
-  public long getMzbh() {
-    return mzbh;
-  }
-
-  public void setMzbh(long mzbh) {
-    this.mzbh = mzbh;
-  }
-
-
-  public long getMbh() {
-    return mbh;
-  }
-
-  public void setMbh(long mbh) {
-    this.mbh = mbh;
-  }
+/**
+ * (Mianshiguizhanzibiao)实体类
+ *
+ * @author makejava
+ * @since 2022-04-26 19:40:43
+ */
+public class Mianshiguizhanzibiao implements Serializable {
+    private static final long serialVersionUID = -75065725658938776L;
+    
+    private Integer mzbh;
+    
+    private Integer mbh;
+    
+    private Integer ybh;
+    
+    private String mzwt;
 
 
-  public long getYbh() {
-    return ybh;
-  }
+    public Integer getMzbh() {
+        return mzbh;
+    }
 
-  public void setYbh(long ybh) {
-    this.ybh = ybh;
-  }
+    public void setMzbh(Integer mzbh) {
+        this.mzbh = mzbh;
+    }
 
+    public Integer getMbh() {
+        return mbh;
+    }
 
-  public String getMzwt() {
-    return mzwt;
-  }
+    public void setMbh(Integer mbh) {
+        this.mbh = mbh;
+    }
 
-  public void setMzwt(String mzwt) {
-    this.mzwt = mzwt;
-  }
+    public Integer getYbh() {
+        return ybh;
+    }
+
+    public void setYbh(Integer ybh) {
+        this.ybh = ybh;
+    }
+
+    public String getMzwt() {
+        return mzwt;
+    }
+
+    public void setMzwt(String mzwt) {
+        this.mzwt = mzwt;
+    }
 
 }
+

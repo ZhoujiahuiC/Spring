@@ -1,67 +1,76 @@
 package com.trkj.hr.pojo;
 
+import java.io.Serializable;
 
-public class Jixiaobiao {
-
-  private long jbh;
-  private long zwbh;
-  private long shjlbh;
-  private long shbid;
-  private String jnr;
-  private String jmc;
-
-
-  public long getJbh() {
-    return jbh;
-  }
-
-  public void setJbh(long jbh) {
-    this.jbh = jbh;
-  }
-
-
-  public long getZwbh() {
-    return zwbh;
-  }
-
-  public void setZwbh(long zwbh) {
-    this.zwbh = zwbh;
-  }
+/**
+ * (Jixiaobiao)实体类
+ *
+ * @author makejava
+ * @since 2022-04-26 19:40:43
+ */
+public class Jixiaobiao implements Serializable {
+    private static final long serialVersionUID = 900274724268062836L;
+    
+    private Integer jbh;
+    
+    private Integer zwbh;
+    
+    private Integer shjlbh;
+    
+    private Integer shbid;
+    
+    private String jnr;
+    
+    private String jmc;
 
 
-  public long getShjlbh() {
-    return shjlbh;
-  }
+    public Integer getJbh() {
+        return jbh;
+    }
 
-  public void setShjlbh(long shjlbh) {
-    this.shjlbh = shjlbh;
-  }
+    public void setJbh(Integer jbh) {
+        this.jbh = jbh;
+    }
 
+    public Integer getZwbh() {
+        return zwbh;
+    }
 
-  public long getShbid() {
-    return shbid;
-  }
+    public void setZwbh(Integer zwbh) {
+        this.zwbh = zwbh;
+    }
 
-  public void setShbid(long shbid) {
-    this.shbid = shbid;
-  }
+    public Integer getShjlbh() {
+        return shjlbh;
+    }
 
+    public void setShjlbh(Integer shjlbh) {
+        this.shjlbh = shjlbh;
+    }
 
-  public String getJnr() {
-    return jnr;
-  }
+    public Integer getShbid() {
+        return shbid;
+    }
 
-  public void setJnr(String jnr) {
-    this.jnr = jnr;
-  }
+    public void setShbid(Integer shbid) {
+        this.shbid = shbid;
+    }
 
+    public String getJnr() {
+        return jnr;
+    }
 
-  public String getJmc() {
-    return jmc;
-  }
+    public void setJnr(String jnr) {
+        this.jnr = jnr;
+    }
 
-  public void setJmc(String jmc) {
-    this.jmc = jmc;
-  }
+    public String getJmc() {
+        return jmc;
+    }
+
+    public void setJmc(String jmc) {
+        this.jmc = jmc;
+    }
 
 }
+

@@ -1,67 +1,76 @@
 package com.trkj.hr.pojo;
 
+import java.io.Serializable;
 
-public class Shebaojishubiao {
-
-  private long sbjsbh;
-  private long shjlbh;
-  private long shbid;
-  private double sbjsje;
-  private String sbname;
-  private double sbjnbl;
-
-
-  public long getSbjsbh() {
-    return sbjsbh;
-  }
-
-  public void setSbjsbh(long sbjsbh) {
-    this.sbjsbh = sbjsbh;
-  }
-
-
-  public long getShjlbh() {
-    return shjlbh;
-  }
-
-  public void setShjlbh(long shjlbh) {
-    this.shjlbh = shjlbh;
-  }
+/**
+ * (Shebaojishubiao)实体类
+ *
+ * @author makejava
+ * @since 2022-04-26 19:40:43
+ */
+public class Shebaojishubiao implements Serializable {
+    private static final long serialVersionUID = -60499217460554341L;
+    
+    private Integer sbjsbh;
+    
+    private Integer shjlbh;
+    
+    private Integer shbid;
+    
+    private Object sbjsje;
+    
+    private String sbname;
+    
+    private Object sbjnbl;
 
 
-  public long getShbid() {
-    return shbid;
-  }
+    public Integer getSbjsbh() {
+        return sbjsbh;
+    }
 
-  public void setShbid(long shbid) {
-    this.shbid = shbid;
-  }
+    public void setSbjsbh(Integer sbjsbh) {
+        this.sbjsbh = sbjsbh;
+    }
 
+    public Integer getShjlbh() {
+        return shjlbh;
+    }
 
-  public double getSbjsje() {
-    return sbjsje;
-  }
+    public void setShjlbh(Integer shjlbh) {
+        this.shjlbh = shjlbh;
+    }
 
-  public void setSbjsje(double sbjsje) {
-    this.sbjsje = sbjsje;
-  }
+    public Integer getShbid() {
+        return shbid;
+    }
 
+    public void setShbid(Integer shbid) {
+        this.shbid = shbid;
+    }
 
-  public String getSbname() {
-    return sbname;
-  }
+    public Object getSbjsje() {
+        return sbjsje;
+    }
 
-  public void setSbname(String sbname) {
-    this.sbname = sbname;
-  }
+    public void setSbjsje(Object sbjsje) {
+        this.sbjsje = sbjsje;
+    }
 
+    public String getSbname() {
+        return sbname;
+    }
 
-  public double getSbjnbl() {
-    return sbjnbl;
-  }
+    public void setSbname(String sbname) {
+        this.sbname = sbname;
+    }
 
-  public void setSbjnbl(double sbjnbl) {
-    this.sbjnbl = sbjnbl;
-  }
+    public Object getSbjnbl() {
+        return sbjnbl;
+    }
+
+    public void setSbjnbl(Object sbjnbl) {
+        this.sbjnbl = sbjnbl;
+    }
 
 }
+

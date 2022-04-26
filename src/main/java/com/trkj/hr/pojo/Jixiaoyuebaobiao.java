@@ -1,57 +1,66 @@
 package com.trkj.hr.pojo;
 
+import java.io.Serializable;
 
-public class Jixiaoyuebaobiao {
-
-  private long jxybbh;
-  private long shjlbh;
-  private long shbid;
-  private long ybh;
-  private long jxybzpf;
-
-
-  public long getJxybbh() {
-    return jxybbh;
-  }
-
-  public void setJxybbh(long jxybbh) {
-    this.jxybbh = jxybbh;
-  }
-
-
-  public long getShjlbh() {
-    return shjlbh;
-  }
-
-  public void setShjlbh(long shjlbh) {
-    this.shjlbh = shjlbh;
-  }
+/**
+ * (Jixiaoyuebaobiao)实体类
+ *
+ * @author makejava
+ * @since 2022-04-26 19:40:43
+ */
+public class Jixiaoyuebaobiao implements Serializable {
+    private static final long serialVersionUID = -75941234202921611L;
+    
+    private Integer jxybbh;
+    
+    private Integer shjlbh;
+    
+    private Integer shbid;
+    
+    private Integer ybh;
+    
+    private Integer jxybzpf;
 
 
-  public long getShbid() {
-    return shbid;
-  }
+    public Integer getJxybbh() {
+        return jxybbh;
+    }
 
-  public void setShbid(long shbid) {
-    this.shbid = shbid;
-  }
+    public void setJxybbh(Integer jxybbh) {
+        this.jxybbh = jxybbh;
+    }
 
+    public Integer getShjlbh() {
+        return shjlbh;
+    }
 
-  public long getYbh() {
-    return ybh;
-  }
+    public void setShjlbh(Integer shjlbh) {
+        this.shjlbh = shjlbh;
+    }
 
-  public void setYbh(long ybh) {
-    this.ybh = ybh;
-  }
+    public Integer getShbid() {
+        return shbid;
+    }
 
+    public void setShbid(Integer shbid) {
+        this.shbid = shbid;
+    }
 
-  public long getJxybzpf() {
-    return jxybzpf;
-  }
+    public Integer getYbh() {
+        return ybh;
+    }
 
-  public void setJxybzpf(long jxybzpf) {
-    this.jxybzpf = jxybzpf;
-  }
+    public void setYbh(Integer ybh) {
+        this.ybh = ybh;
+    }
+
+    public Integer getJxybzpf() {
+        return jxybzpf;
+    }
+
+    public void setJxybzpf(Integer jxybzpf) {
+        this.jxybzpf = jxybzpf;
+    }
 
 }
+

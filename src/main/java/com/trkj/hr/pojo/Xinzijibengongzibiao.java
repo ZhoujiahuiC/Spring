@@ -1,57 +1,66 @@
 package com.trkj.hr.pojo;
 
+import java.io.Serializable;
 
-public class Xinzijibengongzibiao {
-
-  private long xzjbbh;
-  private long zwbh;
-  private long shbid;
-  private long shjlbh;
-  private double xzjbgz;
-
-
-  public long getXzjbbh() {
-    return xzjbbh;
-  }
-
-  public void setXzjbbh(long xzjbbh) {
-    this.xzjbbh = xzjbbh;
-  }
-
-
-  public long getZwbh() {
-    return zwbh;
-  }
-
-  public void setZwbh(long zwbh) {
-    this.zwbh = zwbh;
-  }
+/**
+ * (Xinzijibengongzibiao)实体类
+ *
+ * @author makejava
+ * @since 2022-04-26 19:40:43
+ */
+public class Xinzijibengongzibiao implements Serializable {
+    private static final long serialVersionUID = 944344383690320093L;
+    
+    private Integer xzjbbh;
+    
+    private Integer zwbh;
+    
+    private Integer shbid;
+    
+    private Integer shjlbh;
+    
+    private Object xzjbgz;
 
 
-  public long getShbid() {
-    return shbid;
-  }
+    public Integer getXzjbbh() {
+        return xzjbbh;
+    }
 
-  public void setShbid(long shbid) {
-    this.shbid = shbid;
-  }
+    public void setXzjbbh(Integer xzjbbh) {
+        this.xzjbbh = xzjbbh;
+    }
 
+    public Integer getZwbh() {
+        return zwbh;
+    }
 
-  public long getShjlbh() {
-    return shjlbh;
-  }
+    public void setZwbh(Integer zwbh) {
+        this.zwbh = zwbh;
+    }
 
-  public void setShjlbh(long shjlbh) {
-    this.shjlbh = shjlbh;
-  }
+    public Integer getShbid() {
+        return shbid;
+    }
 
+    public void setShbid(Integer shbid) {
+        this.shbid = shbid;
+    }
 
-  public double getXzjbgz() {
-    return xzjbgz;
-  }
+    public Integer getShjlbh() {
+        return shjlbh;
+    }
 
-  public void setXzjbgz(double xzjbgz) {
-    this.xzjbgz = xzjbgz;
-  }
+    public void setShjlbh(Integer shjlbh) {
+        this.shjlbh = shjlbh;
+    }
+
+    public Object getXzjbgz() {
+        return xzjbgz;
+    }
+
+    public void setXzjbgz(Object xzjbgz) {
+        this.xzjbgz = xzjbgz;
+    }
 
 }
+

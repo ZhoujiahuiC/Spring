@@ -1,57 +1,67 @@
 package com.trkj.hr.pojo;
 
+import java.util.Date;
+import java.io.Serializable;
 
-public class Jixiaopinfenbiao {
-
-  private long jxbh;
-  private long jbh;
-  private long ybh;
-  private java.sql.Date jxsj;
-  private long jxfs;
-
-
-  public long getJxbh() {
-    return jxbh;
-  }
-
-  public void setJxbh(long jxbh) {
-    this.jxbh = jxbh;
-  }
-
-
-  public long getJbh() {
-    return jbh;
-  }
-
-  public void setJbh(long jbh) {
-    this.jbh = jbh;
-  }
+/**
+ * (Jixiaopinfenbiao)实体类
+ *
+ * @author makejava
+ * @since 2022-04-26 19:40:43
+ */
+public class Jixiaopinfenbiao implements Serializable {
+    private static final long serialVersionUID = -16836855765031853L;
+    
+    private Integer jxbh;
+    
+    private Integer jbh;
+    
+    private Integer ybh;
+    
+    private Date jxsj;
+    
+    private Integer jxfs;
 
 
-  public long getYbh() {
-    return ybh;
-  }
+    public Integer getJxbh() {
+        return jxbh;
+    }
 
-  public void setYbh(long ybh) {
-    this.ybh = ybh;
-  }
+    public void setJxbh(Integer jxbh) {
+        this.jxbh = jxbh;
+    }
 
+    public Integer getJbh() {
+        return jbh;
+    }
 
-  public java.sql.Date getJxsj() {
-    return jxsj;
-  }
+    public void setJbh(Integer jbh) {
+        this.jbh = jbh;
+    }
 
-  public void setJxsj(java.sql.Date jxsj) {
-    this.jxsj = jxsj;
-  }
+    public Integer getYbh() {
+        return ybh;
+    }
 
+    public void setYbh(Integer ybh) {
+        this.ybh = ybh;
+    }
 
-  public long getJxfs() {
-    return jxfs;
-  }
+    public Date getJxsj() {
+        return jxsj;
+    }
 
-  public void setJxfs(long jxfs) {
-    this.jxfs = jxfs;
-  }
+    public void setJxsj(Date jxsj) {
+        this.jxsj = jxsj;
+    }
+
+    public Integer getJxfs() {
+        return jxfs;
+    }
+
+    public void setJxfs(Integer jxfs) {
+        this.jxfs = jxfs;
+    }
 
 }
+

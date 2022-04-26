@@ -1,77 +1,87 @@
 package com.trkj.hr.pojo;
 
+import java.util.Date;
+import java.io.Serializable;
 
-public class Rencaibiao {
-
-  private long rid;
-  private long ybh;
-  private long zwbh;
-  private long rzbh;
-  private long rzt;
-  private java.sql.Date rsj;
-  private String rsf;
-
-
-  public long getRid() {
-    return rid;
-  }
-
-  public void setRid(long rid) {
-    this.rid = rid;
-  }
-
-
-  public long getYbh() {
-    return ybh;
-  }
-
-  public void setYbh(long ybh) {
-    this.ybh = ybh;
-  }
+/**
+ * (Rencaibiao)实体类
+ *
+ * @author makejava
+ * @since 2022-04-26 19:40:43
+ */
+public class Rencaibiao implements Serializable {
+    private static final long serialVersionUID = 640387137752934297L;
+    
+    private Integer rid;
+    
+    private Integer ybh;
+    
+    private Integer zwbh;
+    
+    private Integer rzbh;
+    
+    private Integer rzt;
+    
+    private Date rsj;
+    
+    private String rsf;
 
 
-  public long getZwbh() {
-    return zwbh;
-  }
+    public Integer getRid() {
+        return rid;
+    }
 
-  public void setZwbh(long zwbh) {
-    this.zwbh = zwbh;
-  }
+    public void setRid(Integer rid) {
+        this.rid = rid;
+    }
 
+    public Integer getYbh() {
+        return ybh;
+    }
 
-  public long getRzbh() {
-    return rzbh;
-  }
+    public void setYbh(Integer ybh) {
+        this.ybh = ybh;
+    }
 
-  public void setRzbh(long rzbh) {
-    this.rzbh = rzbh;
-  }
+    public Integer getZwbh() {
+        return zwbh;
+    }
 
+    public void setZwbh(Integer zwbh) {
+        this.zwbh = zwbh;
+    }
 
-  public long getRzt() {
-    return rzt;
-  }
+    public Integer getRzbh() {
+        return rzbh;
+    }
 
-  public void setRzt(long rzt) {
-    this.rzt = rzt;
-  }
+    public void setRzbh(Integer rzbh) {
+        this.rzbh = rzbh;
+    }
 
+    public Integer getRzt() {
+        return rzt;
+    }
 
-  public java.sql.Date getRsj() {
-    return rsj;
-  }
+    public void setRzt(Integer rzt) {
+        this.rzt = rzt;
+    }
 
-  public void setRsj(java.sql.Date rsj) {
-    this.rsj = rsj;
-  }
+    public Date getRsj() {
+        return rsj;
+    }
 
+    public void setRsj(Date rsj) {
+        this.rsj = rsj;
+    }
 
-  public String getRsf() {
-    return rsf;
-  }
+    public String getRsf() {
+        return rsf;
+    }
 
-  public void setRsf(String rsf) {
-    this.rsf = rsf;
-  }
+    public void setRsf(String rsf) {
+        this.rsf = rsf;
+    }
 
 }
+

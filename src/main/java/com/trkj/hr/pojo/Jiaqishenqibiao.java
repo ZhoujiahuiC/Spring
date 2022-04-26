@@ -1,67 +1,77 @@
 package com.trkj.hr.pojo;
 
+import java.util.Date;
+import java.io.Serializable;
 
-public class Jiaqishenqibiao {
-
-  private long jqsqbh;
-  private long shjlbh;
-  private long kqjqbh;
-  private long shbid;
-  private java.sql.Date jqsqkssj;
-  private java.sql.Date jqsqjssj;
-
-
-  public long getJqsqbh() {
-    return jqsqbh;
-  }
-
-  public void setJqsqbh(long jqsqbh) {
-    this.jqsqbh = jqsqbh;
-  }
-
-
-  public long getShjlbh() {
-    return shjlbh;
-  }
-
-  public void setShjlbh(long shjlbh) {
-    this.shjlbh = shjlbh;
-  }
+/**
+ * (Jiaqishenqibiao)实体类
+ *
+ * @author makejava
+ * @since 2022-04-26 19:40:43
+ */
+public class Jiaqishenqibiao implements Serializable {
+    private static final long serialVersionUID = -92151149552371710L;
+    
+    private Integer jqsqbh;
+    
+    private Integer shjlbh;
+    
+    private Integer kqjqbh;
+    
+    private Integer shbid;
+    
+    private Date jqsqkssj;
+    
+    private Date jqsqjssj;
 
 
-  public long getKqjqbh() {
-    return kqjqbh;
-  }
+    public Integer getJqsqbh() {
+        return jqsqbh;
+    }
 
-  public void setKqjqbh(long kqjqbh) {
-    this.kqjqbh = kqjqbh;
-  }
+    public void setJqsqbh(Integer jqsqbh) {
+        this.jqsqbh = jqsqbh;
+    }
 
+    public Integer getShjlbh() {
+        return shjlbh;
+    }
 
-  public long getShbid() {
-    return shbid;
-  }
+    public void setShjlbh(Integer shjlbh) {
+        this.shjlbh = shjlbh;
+    }
 
-  public void setShbid(long shbid) {
-    this.shbid = shbid;
-  }
+    public Integer getKqjqbh() {
+        return kqjqbh;
+    }
 
+    public void setKqjqbh(Integer kqjqbh) {
+        this.kqjqbh = kqjqbh;
+    }
 
-  public java.sql.Date getJqsqkssj() {
-    return jqsqkssj;
-  }
+    public Integer getShbid() {
+        return shbid;
+    }
 
-  public void setJqsqkssj(java.sql.Date jqsqkssj) {
-    this.jqsqkssj = jqsqkssj;
-  }
+    public void setShbid(Integer shbid) {
+        this.shbid = shbid;
+    }
 
+    public Date getJqsqkssj() {
+        return jqsqkssj;
+    }
 
-  public java.sql.Date getJqsqjssj() {
-    return jqsqjssj;
-  }
+    public void setJqsqkssj(Date jqsqkssj) {
+        this.jqsqkssj = jqsqkssj;
+    }
 
-  public void setJqsqjssj(java.sql.Date jqsqjssj) {
-    this.jqsqjssj = jqsqjssj;
-  }
+    public Date getJqsqjssj() {
+        return jqsqjssj;
+    }
+
+    public void setJqsqjssj(Date jqsqjssj) {
+        this.jqsqjssj = jqsqjssj;
+    }
 
 }
+

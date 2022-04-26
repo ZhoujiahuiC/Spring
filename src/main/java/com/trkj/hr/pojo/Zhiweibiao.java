@@ -1,57 +1,67 @@
 package com.trkj.hr.pojo;
 
+import java.util.Date;
+import java.io.Serializable;
 
-public class Zhiweibiao {
-
-  private long zwbh;
-  private long bmbh;
-  private String zwjs;
-  private String zwmc;
-  private java.sql.Date zwsj;
-
-
-  public long getZwbh() {
-    return zwbh;
-  }
-
-  public void setZwbh(long zwbh) {
-    this.zwbh = zwbh;
-  }
-
-
-  public long getBmbh() {
-    return bmbh;
-  }
-
-  public void setBmbh(long bmbh) {
-    this.bmbh = bmbh;
-  }
+/**
+ * (Zhiweibiao)实体类
+ *
+ * @author makejava
+ * @since 2022-04-26 19:40:43
+ */
+public class Zhiweibiao implements Serializable {
+    private static final long serialVersionUID = -95282544353001411L;
+    
+    private Integer zwbh;
+    
+    private Integer bmbh;
+    
+    private String zwjs;
+    
+    private String zwmc;
+    
+    private Date zwsj;
 
 
-  public String getZwjs() {
-    return zwjs;
-  }
+    public Integer getZwbh() {
+        return zwbh;
+    }
 
-  public void setZwjs(String zwjs) {
-    this.zwjs = zwjs;
-  }
+    public void setZwbh(Integer zwbh) {
+        this.zwbh = zwbh;
+    }
 
+    public Integer getBmbh() {
+        return bmbh;
+    }
 
-  public String getZwmc() {
-    return zwmc;
-  }
+    public void setBmbh(Integer bmbh) {
+        this.bmbh = bmbh;
+    }
 
-  public void setZwmc(String zwmc) {
-    this.zwmc = zwmc;
-  }
+    public String getZwjs() {
+        return zwjs;
+    }
 
+    public void setZwjs(String zwjs) {
+        this.zwjs = zwjs;
+    }
 
-  public java.sql.Date getZwsj() {
-    return zwsj;
-  }
+    public String getZwmc() {
+        return zwmc;
+    }
 
-  public void setZwsj(java.sql.Date zwsj) {
-    this.zwsj = zwsj;
-  }
+    public void setZwmc(String zwmc) {
+        this.zwmc = zwmc;
+    }
+
+    public Date getZwsj() {
+        return zwsj;
+    }
+
+    public void setZwsj(Date zwsj) {
+        this.zwsj = zwsj;
+    }
 
 }
+

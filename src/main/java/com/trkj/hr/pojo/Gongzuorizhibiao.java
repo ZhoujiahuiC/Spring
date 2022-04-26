@@ -1,47 +1,57 @@
 package com.trkj.hr.pojo;
 
+import java.util.Date;
+import java.io.Serializable;
 
-public class Gongzuorizhibiao {
-
-  private long gzrzbh;
-  private long ybh;
-  private String gzrznr;
-  private java.sql.Date gzrzsj;
-
-
-  public long getGzrzbh() {
-    return gzrzbh;
-  }
-
-  public void setGzrzbh(long gzrzbh) {
-    this.gzrzbh = gzrzbh;
-  }
-
-
-  public long getYbh() {
-    return ybh;
-  }
-
-  public void setYbh(long ybh) {
-    this.ybh = ybh;
-  }
+/**
+ * (Gongzuorizhibiao)实体类
+ *
+ * @author makejava
+ * @since 2022-04-26 19:40:43
+ */
+public class Gongzuorizhibiao implements Serializable {
+    private static final long serialVersionUID = 914798817872323820L;
+    
+    private Integer gzrzbh;
+    
+    private Integer ybh;
+    
+    private String gzrznr;
+    
+    private Date gzrzsj;
 
 
-  public String getGzrznr() {
-    return gzrznr;
-  }
+    public Integer getGzrzbh() {
+        return gzrzbh;
+    }
 
-  public void setGzrznr(String gzrznr) {
-    this.gzrznr = gzrznr;
-  }
+    public void setGzrzbh(Integer gzrzbh) {
+        this.gzrzbh = gzrzbh;
+    }
 
+    public Integer getYbh() {
+        return ybh;
+    }
 
-  public java.sql.Date getGzrzsj() {
-    return gzrzsj;
-  }
+    public void setYbh(Integer ybh) {
+        this.ybh = ybh;
+    }
 
-  public void setGzrzsj(java.sql.Date gzrzsj) {
-    this.gzrzsj = gzrzsj;
-  }
+    public String getGzrznr() {
+        return gzrznr;
+    }
+
+    public void setGzrznr(String gzrznr) {
+        this.gzrznr = gzrznr;
+    }
+
+    public Date getGzrzsj() {
+        return gzrzsj;
+    }
+
+    public void setGzrzsj(Date gzrzsj) {
+        this.gzrzsj = gzrzsj;
+    }
 
 }
+

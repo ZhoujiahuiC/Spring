@@ -1,57 +1,67 @@
 package com.trkj.hr.pojo;
 
+import java.util.Date;
+import java.io.Serializable;
 
-public class Gonggaobiao {
-
-  private long ggbh;
-  private long ybh;
-  private String ggnr;
-  private java.sql.Date ggsj;
-  private long ggyds;
-
-
-  public long getGgbh() {
-    return ggbh;
-  }
-
-  public void setGgbh(long ggbh) {
-    this.ggbh = ggbh;
-  }
-
-
-  public long getYbh() {
-    return ybh;
-  }
-
-  public void setYbh(long ybh) {
-    this.ybh = ybh;
-  }
+/**
+ * (Gonggaobiao)实体类
+ *
+ * @author makejava
+ * @since 2022-04-26 19:40:43
+ */
+public class Gonggaobiao implements Serializable {
+    private static final long serialVersionUID = -32940964607995036L;
+    
+    private Integer ggbh;
+    
+    private Integer ybh;
+    
+    private String ggnr;
+    
+    private Date ggsj;
+    
+    private Integer ggyds;
 
 
-  public String getGgnr() {
-    return ggnr;
-  }
+    public Integer getGgbh() {
+        return ggbh;
+    }
 
-  public void setGgnr(String ggnr) {
-    this.ggnr = ggnr;
-  }
+    public void setGgbh(Integer ggbh) {
+        this.ggbh = ggbh;
+    }
 
+    public Integer getYbh() {
+        return ybh;
+    }
 
-  public java.sql.Date getGgsj() {
-    return ggsj;
-  }
+    public void setYbh(Integer ybh) {
+        this.ybh = ybh;
+    }
 
-  public void setGgsj(java.sql.Date ggsj) {
-    this.ggsj = ggsj;
-  }
+    public String getGgnr() {
+        return ggnr;
+    }
 
+    public void setGgnr(String ggnr) {
+        this.ggnr = ggnr;
+    }
 
-  public long getGgyds() {
-    return ggyds;
-  }
+    public Date getGgsj() {
+        return ggsj;
+    }
 
-  public void setGgyds(long ggyds) {
-    this.ggyds = ggyds;
-  }
+    public void setGgsj(Date ggsj) {
+        this.ggsj = ggsj;
+    }
+
+    public Integer getGgyds() {
+        return ggyds;
+    }
+
+    public void setGgyds(Integer ggyds) {
+        this.ggyds = ggyds;
+    }
 
 }
+

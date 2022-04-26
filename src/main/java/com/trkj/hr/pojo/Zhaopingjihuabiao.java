@@ -1,67 +1,76 @@
 package com.trkj.hr.pojo;
 
+import java.io.Serializable;
 
-public class Zhaopingjihuabiao {
-
-  private long zbh;
-  private long shjlbh;
-  private long shbid;
-  private long zwbh;
-  private long zrs;
-  private String zmc;
-
-
-  public long getZbh() {
-    return zbh;
-  }
-
-  public void setZbh(long zbh) {
-    this.zbh = zbh;
-  }
-
-
-  public long getShjlbh() {
-    return shjlbh;
-  }
-
-  public void setShjlbh(long shjlbh) {
-    this.shjlbh = shjlbh;
-  }
+/**
+ * (Zhaopingjihuabiao)实体类
+ *
+ * @author makejava
+ * @since 2022-04-26 19:40:43
+ */
+public class Zhaopingjihuabiao implements Serializable {
+    private static final long serialVersionUID = -93333286336893673L;
+    
+    private Integer zbh;
+    
+    private Integer shjlbh;
+    
+    private Integer shbid;
+    
+    private Integer zwbh;
+    
+    private Integer zrs;
+    
+    private String zmc;
 
 
-  public long getShbid() {
-    return shbid;
-  }
+    public Integer getZbh() {
+        return zbh;
+    }
 
-  public void setShbid(long shbid) {
-    this.shbid = shbid;
-  }
+    public void setZbh(Integer zbh) {
+        this.zbh = zbh;
+    }
 
+    public Integer getShjlbh() {
+        return shjlbh;
+    }
 
-  public long getZwbh() {
-    return zwbh;
-  }
+    public void setShjlbh(Integer shjlbh) {
+        this.shjlbh = shjlbh;
+    }
 
-  public void setZwbh(long zwbh) {
-    this.zwbh = zwbh;
-  }
+    public Integer getShbid() {
+        return shbid;
+    }
 
+    public void setShbid(Integer shbid) {
+        this.shbid = shbid;
+    }
 
-  public long getZrs() {
-    return zrs;
-  }
+    public Integer getZwbh() {
+        return zwbh;
+    }
 
-  public void setZrs(long zrs) {
-    this.zrs = zrs;
-  }
+    public void setZwbh(Integer zwbh) {
+        this.zwbh = zwbh;
+    }
 
+    public Integer getZrs() {
+        return zrs;
+    }
 
-  public String getZmc() {
-    return zmc;
-  }
+    public void setZrs(Integer zrs) {
+        this.zrs = zrs;
+    }
 
-  public void setZmc(String zmc) {
-    this.zmc = zmc;
-  }
+    public String getZmc() {
+        return zmc;
+    }
+
+    public void setZmc(String zmc) {
+        this.zmc = zmc;
+    }
 
 }
+

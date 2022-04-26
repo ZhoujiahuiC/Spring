@@ -1,67 +1,76 @@
 package com.trkj.hr.pojo;
 
+import java.io.Serializable;
 
-public class Nashuibiao {
-
-  private long nsbbh;
-  private long shbid;
-  private long shjlbh;
-  private double nszdjne;
-  private double nszgjne;
-  private double nsjnbl;
-
-
-  public long getNsbbh() {
-    return nsbbh;
-  }
-
-  public void setNsbbh(long nsbbh) {
-    this.nsbbh = nsbbh;
-  }
-
-
-  public long getShbid() {
-    return shbid;
-  }
-
-  public void setShbid(long shbid) {
-    this.shbid = shbid;
-  }
+/**
+ * (Nashuibiao)实体类
+ *
+ * @author makejava
+ * @since 2022-04-26 19:40:43
+ */
+public class Nashuibiao implements Serializable {
+    private static final long serialVersionUID = 546004811077005624L;
+    
+    private Integer nsbbh;
+    
+    private Integer shbid;
+    
+    private Integer shjlbh;
+    
+    private Object nszdjne;
+    
+    private Object nszgjne;
+    
+    private Object nsjnbl;
 
 
-  public long getShjlbh() {
-    return shjlbh;
-  }
+    public Integer getNsbbh() {
+        return nsbbh;
+    }
 
-  public void setShjlbh(long shjlbh) {
-    this.shjlbh = shjlbh;
-  }
+    public void setNsbbh(Integer nsbbh) {
+        this.nsbbh = nsbbh;
+    }
 
+    public Integer getShbid() {
+        return shbid;
+    }
 
-  public double getNszdjne() {
-    return nszdjne;
-  }
+    public void setShbid(Integer shbid) {
+        this.shbid = shbid;
+    }
 
-  public void setNszdjne(double nszdjne) {
-    this.nszdjne = nszdjne;
-  }
+    public Integer getShjlbh() {
+        return shjlbh;
+    }
 
+    public void setShjlbh(Integer shjlbh) {
+        this.shjlbh = shjlbh;
+    }
 
-  public double getNszgjne() {
-    return nszgjne;
-  }
+    public Object getNszdjne() {
+        return nszdjne;
+    }
 
-  public void setNszgjne(double nszgjne) {
-    this.nszgjne = nszgjne;
-  }
+    public void setNszdjne(Object nszdjne) {
+        this.nszdjne = nszdjne;
+    }
 
+    public Object getNszgjne() {
+        return nszgjne;
+    }
 
-  public double getNsjnbl() {
-    return nsjnbl;
-  }
+    public void setNszgjne(Object nszgjne) {
+        this.nszgjne = nszgjne;
+    }
 
-  public void setNsjnbl(double nsjnbl) {
-    this.nsjnbl = nsjnbl;
-  }
+    public Object getNsjnbl() {
+        return nsjnbl;
+    }
+
+    public void setNsjnbl(Object nsjnbl) {
+        this.nsjnbl = nsjnbl;
+    }
 
 }
+

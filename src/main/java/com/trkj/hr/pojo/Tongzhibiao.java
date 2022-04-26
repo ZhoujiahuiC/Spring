@@ -1,67 +1,77 @@
 package com.trkj.hr.pojo;
 
+import java.util.Date;
+import java.io.Serializable;
 
-public class Tongzhibiao {
-
-  private long tzbh;
-  private long ybh;
-  private long bmbh;
-  private String tznr;
-  private java.sql.Date tzsj;
-  private long tzyds;
-
-
-  public long getTzbh() {
-    return tzbh;
-  }
-
-  public void setTzbh(long tzbh) {
-    this.tzbh = tzbh;
-  }
-
-
-  public long getYbh() {
-    return ybh;
-  }
-
-  public void setYbh(long ybh) {
-    this.ybh = ybh;
-  }
+/**
+ * (Tongzhibiao)实体类
+ *
+ * @author makejava
+ * @since 2022-04-26 19:40:43
+ */
+public class Tongzhibiao implements Serializable {
+    private static final long serialVersionUID = -86460366947497339L;
+    
+    private Integer tzbh;
+    
+    private Integer ybh;
+    
+    private Integer bmbh;
+    
+    private String tznr;
+    
+    private Date tzsj;
+    
+    private Integer tzyds;
 
 
-  public long getBmbh() {
-    return bmbh;
-  }
+    public Integer getTzbh() {
+        return tzbh;
+    }
 
-  public void setBmbh(long bmbh) {
-    this.bmbh = bmbh;
-  }
+    public void setTzbh(Integer tzbh) {
+        this.tzbh = tzbh;
+    }
 
+    public Integer getYbh() {
+        return ybh;
+    }
 
-  public String getTznr() {
-    return tznr;
-  }
+    public void setYbh(Integer ybh) {
+        this.ybh = ybh;
+    }
 
-  public void setTznr(String tznr) {
-    this.tznr = tznr;
-  }
+    public Integer getBmbh() {
+        return bmbh;
+    }
 
+    public void setBmbh(Integer bmbh) {
+        this.bmbh = bmbh;
+    }
 
-  public java.sql.Date getTzsj() {
-    return tzsj;
-  }
+    public String getTznr() {
+        return tznr;
+    }
 
-  public void setTzsj(java.sql.Date tzsj) {
-    this.tzsj = tzsj;
-  }
+    public void setTznr(String tznr) {
+        this.tznr = tznr;
+    }
 
+    public Date getTzsj() {
+        return tzsj;
+    }
 
-  public long getTzyds() {
-    return tzyds;
-  }
+    public void setTzsj(Date tzsj) {
+        this.tzsj = tzsj;
+    }
 
-  public void setTzyds(long tzyds) {
-    this.tzyds = tzyds;
-  }
+    public Integer getTzyds() {
+        return tzyds;
+    }
+
+    public void setTzyds(Integer tzyds) {
+        this.tzyds = tzyds;
+    }
 
 }
+

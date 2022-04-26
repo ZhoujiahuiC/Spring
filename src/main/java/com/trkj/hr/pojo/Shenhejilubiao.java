@@ -1,47 +1,57 @@
 package com.trkj.hr.pojo;
 
+import java.util.Date;
+import java.io.Serializable;
 
-public class Shenhejilubiao {
-
-  private long shjlbh;
-  private long ybh;
-  private long shjlzt;
-  private java.sql.Date shjlsj;
-
-
-  public long getShjlbh() {
-    return shjlbh;
-  }
-
-  public void setShjlbh(long shjlbh) {
-    this.shjlbh = shjlbh;
-  }
-
-
-  public long getYbh() {
-    return ybh;
-  }
-
-  public void setYbh(long ybh) {
-    this.ybh = ybh;
-  }
+/**
+ * (Shenhejilubiao)实体类
+ *
+ * @author makejava
+ * @since 2022-04-26 19:40:43
+ */
+public class Shenhejilubiao implements Serializable {
+    private static final long serialVersionUID = 784372466589693230L;
+    
+    private Integer shjlbh;
+    
+    private Integer ybh;
+    
+    private Integer shjlzt;
+    
+    private Date shjlsj;
 
 
-  public long getShjlzt() {
-    return shjlzt;
-  }
+    public Integer getShjlbh() {
+        return shjlbh;
+    }
 
-  public void setShjlzt(long shjlzt) {
-    this.shjlzt = shjlzt;
-  }
+    public void setShjlbh(Integer shjlbh) {
+        this.shjlbh = shjlbh;
+    }
 
+    public Integer getYbh() {
+        return ybh;
+    }
 
-  public java.sql.Date getShjlsj() {
-    return shjlsj;
-  }
+    public void setYbh(Integer ybh) {
+        this.ybh = ybh;
+    }
 
-  public void setShjlsj(java.sql.Date shjlsj) {
-    this.shjlsj = shjlsj;
-  }
+    public Integer getShjlzt() {
+        return shjlzt;
+    }
+
+    public void setShjlzt(Integer shjlzt) {
+        this.shjlzt = shjlzt;
+    }
+
+    public Date getShjlsj() {
+        return shjlsj;
+    }
+
+    public void setShjlsj(Date shjlsj) {
+        this.shjlsj = shjlsj;
+    }
 
 }
+

@@ -1,57 +1,67 @@
 package com.trkj.hr.pojo;
 
+import java.util.Date;
+import java.io.Serializable;
 
-public class Rizhidianpingbiao {
-
-  private long rzdpbh;
-  private long gzrzbh;
-  private long ybh;
-  private String rzdpnr;
-  private java.sql.Date rzdpsj;
-
-
-  public long getRzdpbh() {
-    return rzdpbh;
-  }
-
-  public void setRzdpbh(long rzdpbh) {
-    this.rzdpbh = rzdpbh;
-  }
-
-
-  public long getGzrzbh() {
-    return gzrzbh;
-  }
-
-  public void setGzrzbh(long gzrzbh) {
-    this.gzrzbh = gzrzbh;
-  }
+/**
+ * (Rizhidianpingbiao)实体类
+ *
+ * @author makejava
+ * @since 2022-04-26 19:40:43
+ */
+public class Rizhidianpingbiao implements Serializable {
+    private static final long serialVersionUID = -53228457381002835L;
+    
+    private Integer rzdpbh;
+    
+    private Integer gzrzbh;
+    
+    private Integer ybh;
+    
+    private String rzdpnr;
+    
+    private Date rzdpsj;
 
 
-  public long getYbh() {
-    return ybh;
-  }
+    public Integer getRzdpbh() {
+        return rzdpbh;
+    }
 
-  public void setYbh(long ybh) {
-    this.ybh = ybh;
-  }
+    public void setRzdpbh(Integer rzdpbh) {
+        this.rzdpbh = rzdpbh;
+    }
 
+    public Integer getGzrzbh() {
+        return gzrzbh;
+    }
 
-  public String getRzdpnr() {
-    return rzdpnr;
-  }
+    public void setGzrzbh(Integer gzrzbh) {
+        this.gzrzbh = gzrzbh;
+    }
 
-  public void setRzdpnr(String rzdpnr) {
-    this.rzdpnr = rzdpnr;
-  }
+    public Integer getYbh() {
+        return ybh;
+    }
 
+    public void setYbh(Integer ybh) {
+        this.ybh = ybh;
+    }
 
-  public java.sql.Date getRzdpsj() {
-    return rzdpsj;
-  }
+    public String getRzdpnr() {
+        return rzdpnr;
+    }
 
-  public void setRzdpsj(java.sql.Date rzdpsj) {
-    this.rzdpsj = rzdpsj;
-  }
+    public void setRzdpnr(String rzdpnr) {
+        this.rzdpnr = rzdpnr;
+    }
+
+    public Date getRzdpsj() {
+        return rzdpsj;
+    }
+
+    public void setRzdpsj(Date rzdpsj) {
+        this.rzdpsj = rzdpsj;
+    }
 
 }
+

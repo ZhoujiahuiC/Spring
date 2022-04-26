@@ -1,107 +1,117 @@
 package com.trkj.hr.pojo;
 
+import java.util.Date;
+import java.io.Serializable;
 
-public class Chuchaibiao {
-
-  private long cbh;
-  private long shbid;
-  private long shjlbh;
-  private String ccfd;
-  private String cmdd;
-  private java.sql.Date ckssj;
-  private java.sql.Date cyjsj;
-  private java.sql.Date csjsj;
-  private long czt;
-  private String cccnr;
-
-
-  public long getCbh() {
-    return cbh;
-  }
-
-  public void setCbh(long cbh) {
-    this.cbh = cbh;
-  }
-
-
-  public long getShbid() {
-    return shbid;
-  }
-
-  public void setShbid(long shbid) {
-    this.shbid = shbid;
-  }
-
-
-  public long getShjlbh() {
-    return shjlbh;
-  }
-
-  public void setShjlbh(long shjlbh) {
-    this.shjlbh = shjlbh;
-  }
+/**
+ * (Chuchaibiao)实体类
+ *
+ * @author makejava
+ * @since 2022-04-26 19:40:43
+ */
+public class Chuchaibiao implements Serializable {
+    private static final long serialVersionUID = 792470116273153762L;
+    
+    private Integer cbh;
+    
+    private Integer shbid;
+    
+    private Integer shjlbh;
+    
+    private String ccfd;
+    
+    private String cmdd;
+    
+    private Date ckssj;
+    
+    private Date cyjsj;
+    
+    private Date csjsj;
+    
+    private Integer czt;
+    
+    private String cccnr;
 
 
-  public String getCcfd() {
-    return ccfd;
-  }
+    public Integer getCbh() {
+        return cbh;
+    }
 
-  public void setCcfd(String ccfd) {
-    this.ccfd = ccfd;
-  }
+    public void setCbh(Integer cbh) {
+        this.cbh = cbh;
+    }
 
+    public Integer getShbid() {
+        return shbid;
+    }
 
-  public String getCmdd() {
-    return cmdd;
-  }
+    public void setShbid(Integer shbid) {
+        this.shbid = shbid;
+    }
 
-  public void setCmdd(String cmdd) {
-    this.cmdd = cmdd;
-  }
+    public Integer getShjlbh() {
+        return shjlbh;
+    }
 
+    public void setShjlbh(Integer shjlbh) {
+        this.shjlbh = shjlbh;
+    }
 
-  public java.sql.Date getCkssj() {
-    return ckssj;
-  }
+    public String getCcfd() {
+        return ccfd;
+    }
 
-  public void setCkssj(java.sql.Date ckssj) {
-    this.ckssj = ckssj;
-  }
+    public void setCcfd(String ccfd) {
+        this.ccfd = ccfd;
+    }
 
+    public String getCmdd() {
+        return cmdd;
+    }
 
-  public java.sql.Date getCyjsj() {
-    return cyjsj;
-  }
+    public void setCmdd(String cmdd) {
+        this.cmdd = cmdd;
+    }
 
-  public void setCyjsj(java.sql.Date cyjsj) {
-    this.cyjsj = cyjsj;
-  }
+    public Date getCkssj() {
+        return ckssj;
+    }
 
+    public void setCkssj(Date ckssj) {
+        this.ckssj = ckssj;
+    }
 
-  public java.sql.Date getCsjsj() {
-    return csjsj;
-  }
+    public Date getCyjsj() {
+        return cyjsj;
+    }
 
-  public void setCsjsj(java.sql.Date csjsj) {
-    this.csjsj = csjsj;
-  }
+    public void setCyjsj(Date cyjsj) {
+        this.cyjsj = cyjsj;
+    }
 
+    public Date getCsjsj() {
+        return csjsj;
+    }
 
-  public long getCzt() {
-    return czt;
-  }
+    public void setCsjsj(Date csjsj) {
+        this.csjsj = csjsj;
+    }
 
-  public void setCzt(long czt) {
-    this.czt = czt;
-  }
+    public Integer getCzt() {
+        return czt;
+    }
 
+    public void setCzt(Integer czt) {
+        this.czt = czt;
+    }
 
-  public String getCccnr() {
-    return cccnr;
-  }
+    public String getCccnr() {
+        return cccnr;
+    }
 
-  public void setCccnr(String cccnr) {
-    this.cccnr = cccnr;
-  }
+    public void setCccnr(String cccnr) {
+        this.cccnr = cccnr;
+    }
 
 }
+

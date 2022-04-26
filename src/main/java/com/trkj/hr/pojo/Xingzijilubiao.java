@@ -1,107 +1,117 @@
 package com.trkj.hr.pojo;
 
+import java.util.Date;
+import java.io.Serializable;
 
-public class Xingzijilubiao {
-
-  private long xzjlbh;
-  private long ybh;
-  private long shbid;
-  private long shjlbh;
-  private double xzjljbgz;
-  private double xzjlsb;
-  private double szjlqj;
-  private double szjlze;
-  private double szjlsh;
-  private java.sql.Date szjlsj;
-
-
-  public long getXzjlbh() {
-    return xzjlbh;
-  }
-
-  public void setXzjlbh(long xzjlbh) {
-    this.xzjlbh = xzjlbh;
-  }
-
-
-  public long getYbh() {
-    return ybh;
-  }
-
-  public void setYbh(long ybh) {
-    this.ybh = ybh;
-  }
-
-
-  public long getShbid() {
-    return shbid;
-  }
-
-  public void setShbid(long shbid) {
-    this.shbid = shbid;
-  }
+/**
+ * (Xingzijilubiao)实体类
+ *
+ * @author makejava
+ * @since 2022-04-26 19:40:43
+ */
+public class Xingzijilubiao implements Serializable {
+    private static final long serialVersionUID = -28602785173519428L;
+    
+    private Integer xzjlbh;
+    
+    private Integer ybh;
+    
+    private Integer shbid;
+    
+    private Integer shjlbh;
+    
+    private Object xzjljbgz;
+    
+    private Object xzjlsb;
+    
+    private Object szjlqj;
+    
+    private Object szjlze;
+    
+    private Object szjlsh;
+    
+    private Date szjlsj;
 
 
-  public long getShjlbh() {
-    return shjlbh;
-  }
+    public Integer getXzjlbh() {
+        return xzjlbh;
+    }
 
-  public void setShjlbh(long shjlbh) {
-    this.shjlbh = shjlbh;
-  }
+    public void setXzjlbh(Integer xzjlbh) {
+        this.xzjlbh = xzjlbh;
+    }
 
+    public Integer getYbh() {
+        return ybh;
+    }
 
-  public double getXzjljbgz() {
-    return xzjljbgz;
-  }
+    public void setYbh(Integer ybh) {
+        this.ybh = ybh;
+    }
 
-  public void setXzjljbgz(double xzjljbgz) {
-    this.xzjljbgz = xzjljbgz;
-  }
+    public Integer getShbid() {
+        return shbid;
+    }
 
+    public void setShbid(Integer shbid) {
+        this.shbid = shbid;
+    }
 
-  public double getXzjlsb() {
-    return xzjlsb;
-  }
+    public Integer getShjlbh() {
+        return shjlbh;
+    }
 
-  public void setXzjlsb(double xzjlsb) {
-    this.xzjlsb = xzjlsb;
-  }
+    public void setShjlbh(Integer shjlbh) {
+        this.shjlbh = shjlbh;
+    }
 
+    public Object getXzjljbgz() {
+        return xzjljbgz;
+    }
 
-  public double getSzjlqj() {
-    return szjlqj;
-  }
+    public void setXzjljbgz(Object xzjljbgz) {
+        this.xzjljbgz = xzjljbgz;
+    }
 
-  public void setSzjlqj(double szjlqj) {
-    this.szjlqj = szjlqj;
-  }
+    public Object getXzjlsb() {
+        return xzjlsb;
+    }
 
+    public void setXzjlsb(Object xzjlsb) {
+        this.xzjlsb = xzjlsb;
+    }
 
-  public double getSzjlze() {
-    return szjlze;
-  }
+    public Object getSzjlqj() {
+        return szjlqj;
+    }
 
-  public void setSzjlze(double szjlze) {
-    this.szjlze = szjlze;
-  }
+    public void setSzjlqj(Object szjlqj) {
+        this.szjlqj = szjlqj;
+    }
 
+    public Object getSzjlze() {
+        return szjlze;
+    }
 
-  public double getSzjlsh() {
-    return szjlsh;
-  }
+    public void setSzjlze(Object szjlze) {
+        this.szjlze = szjlze;
+    }
 
-  public void setSzjlsh(double szjlsh) {
-    this.szjlsh = szjlsh;
-  }
+    public Object getSzjlsh() {
+        return szjlsh;
+    }
 
+    public void setSzjlsh(Object szjlsh) {
+        this.szjlsh = szjlsh;
+    }
 
-  public java.sql.Date getSzjlsj() {
-    return szjlsj;
-  }
+    public Date getSzjlsj() {
+        return szjlsj;
+    }
 
-  public void setSzjlsj(java.sql.Date szjlsj) {
-    this.szjlsj = szjlsj;
-  }
+    public void setSzjlsj(Date szjlsj) {
+        this.szjlsj = szjlsj;
+    }
 
 }
+

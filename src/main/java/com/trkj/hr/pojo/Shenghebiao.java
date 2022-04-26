@@ -1,37 +1,46 @@
 package com.trkj.hr.pojo;
 
+import java.io.Serializable;
 
-public class Shenghebiao {
-
-  private long shbid;
-  private long qxbh;
-  private String shbmc;
-
-
-  public long getShbid() {
-    return shbid;
-  }
-
-  public void setShbid(long shbid) {
-    this.shbid = shbid;
-  }
-
-
-  public long getQxbh() {
-    return qxbh;
-  }
-
-  public void setQxbh(long qxbh) {
-    this.qxbh = qxbh;
-  }
+/**
+ * (Shenghebiao)实体类
+ *
+ * @author makejava
+ * @since 2022-04-26 19:40:43
+ */
+public class Shenghebiao implements Serializable {
+    private static final long serialVersionUID = 284221734693038151L;
+    
+    private Integer shbid;
+    
+    private Integer qxbh;
+    
+    private String shbmc;
 
 
-  public String getShbmc() {
-    return shbmc;
-  }
+    public Integer getShbid() {
+        return shbid;
+    }
 
-  public void setShbmc(String shbmc) {
-    this.shbmc = shbmc;
-  }
+    public void setShbid(Integer shbid) {
+        this.shbid = shbid;
+    }
+
+    public Integer getQxbh() {
+        return qxbh;
+    }
+
+    public void setQxbh(Integer qxbh) {
+        this.qxbh = qxbh;
+    }
+
+    public String getShbmc() {
+        return shbmc;
+    }
+
+    public void setShbmc(String shbmc) {
+        this.shbmc = shbmc;
+    }
 
 }
+

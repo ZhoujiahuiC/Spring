@@ -1,77 +1,87 @@
 package com.trkj.hr.pojo;
 
+import java.util.Date;
+import java.io.Serializable;
 
-public class Mianshijilubiao {
-
-  private long mjbh;
-  private long rid;
-  private long ybh;
-  private long mzbh;
-  private java.sql.Date mjsj;
-  private long mjzt;
-  private java.sql.Date mjxcsj;
-
-
-  public long getMjbh() {
-    return mjbh;
-  }
-
-  public void setMjbh(long mjbh) {
-    this.mjbh = mjbh;
-  }
-
-
-  public long getRid() {
-    return rid;
-  }
-
-  public void setRid(long rid) {
-    this.rid = rid;
-  }
+/**
+ * (Mianshijilubiao)实体类
+ *
+ * @author makejava
+ * @since 2022-04-26 19:40:43
+ */
+public class Mianshijilubiao implements Serializable {
+    private static final long serialVersionUID = 753144064919675833L;
+    
+    private Integer mjbh;
+    
+    private Integer rid;
+    
+    private Integer ybh;
+    
+    private Integer mzbh;
+    
+    private Date mjsj;
+    
+    private Integer mjzt;
+    
+    private Date mjxcsj;
 
 
-  public long getYbh() {
-    return ybh;
-  }
+    public Integer getMjbh() {
+        return mjbh;
+    }
 
-  public void setYbh(long ybh) {
-    this.ybh = ybh;
-  }
+    public void setMjbh(Integer mjbh) {
+        this.mjbh = mjbh;
+    }
 
+    public Integer getRid() {
+        return rid;
+    }
 
-  public long getMzbh() {
-    return mzbh;
-  }
+    public void setRid(Integer rid) {
+        this.rid = rid;
+    }
 
-  public void setMzbh(long mzbh) {
-    this.mzbh = mzbh;
-  }
+    public Integer getYbh() {
+        return ybh;
+    }
 
+    public void setYbh(Integer ybh) {
+        this.ybh = ybh;
+    }
 
-  public java.sql.Date getMjsj() {
-    return mjsj;
-  }
+    public Integer getMzbh() {
+        return mzbh;
+    }
 
-  public void setMjsj(java.sql.Date mjsj) {
-    this.mjsj = mjsj;
-  }
+    public void setMzbh(Integer mzbh) {
+        this.mzbh = mzbh;
+    }
 
+    public Date getMjsj() {
+        return mjsj;
+    }
 
-  public long getMjzt() {
-    return mjzt;
-  }
+    public void setMjsj(Date mjsj) {
+        this.mjsj = mjsj;
+    }
 
-  public void setMjzt(long mjzt) {
-    this.mjzt = mjzt;
-  }
+    public Integer getMjzt() {
+        return mjzt;
+    }
 
+    public void setMjzt(Integer mjzt) {
+        this.mjzt = mjzt;
+    }
 
-  public java.sql.Date getMjxcsj() {
-    return mjxcsj;
-  }
+    public Date getMjxcsj() {
+        return mjxcsj;
+    }
 
-  public void setMjxcsj(java.sql.Date mjxcsj) {
-    this.mjxcsj = mjxcsj;
-  }
+    public void setMjxcsj(Date mjxcsj) {
+        this.mjxcsj = mjxcsj;
+    }
 
 }
+

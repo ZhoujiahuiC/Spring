@@ -1,67 +1,77 @@
 package com.trkj.hr.pojo;
 
+import java.util.Date;
+import java.io.Serializable;
 
-public class Yuangonggzjlbiao {
-
-  private long yggzbh;
-  private long shbid;
-  private long shjlbh;
-  private long ybh;
-  private long yggzzt;
-  private java.sql.Date yggzsj;
-
-
-  public long getYggzbh() {
-    return yggzbh;
-  }
-
-  public void setYggzbh(long yggzbh) {
-    this.yggzbh = yggzbh;
-  }
-
-
-  public long getShbid() {
-    return shbid;
-  }
-
-  public void setShbid(long shbid) {
-    this.shbid = shbid;
-  }
+/**
+ * (Yuangonggzjlbiao)实体类
+ *
+ * @author makejava
+ * @since 2022-04-26 19:40:43
+ */
+public class Yuangonggzjlbiao implements Serializable {
+    private static final long serialVersionUID = -37162512648632433L;
+    
+    private Integer yggzbh;
+    
+    private Integer shbid;
+    
+    private Integer shjlbh;
+    
+    private Integer ybh;
+    
+    private Integer yggzzt;
+    
+    private Date yggzsj;
 
 
-  public long getShjlbh() {
-    return shjlbh;
-  }
+    public Integer getYggzbh() {
+        return yggzbh;
+    }
 
-  public void setShjlbh(long shjlbh) {
-    this.shjlbh = shjlbh;
-  }
+    public void setYggzbh(Integer yggzbh) {
+        this.yggzbh = yggzbh;
+    }
 
+    public Integer getShbid() {
+        return shbid;
+    }
 
-  public long getYbh() {
-    return ybh;
-  }
+    public void setShbid(Integer shbid) {
+        this.shbid = shbid;
+    }
 
-  public void setYbh(long ybh) {
-    this.ybh = ybh;
-  }
+    public Integer getShjlbh() {
+        return shjlbh;
+    }
 
+    public void setShjlbh(Integer shjlbh) {
+        this.shjlbh = shjlbh;
+    }
 
-  public long getYggzzt() {
-    return yggzzt;
-  }
+    public Integer getYbh() {
+        return ybh;
+    }
 
-  public void setYggzzt(long yggzzt) {
-    this.yggzzt = yggzzt;
-  }
+    public void setYbh(Integer ybh) {
+        this.ybh = ybh;
+    }
 
+    public Integer getYggzzt() {
+        return yggzzt;
+    }
 
-  public java.sql.Date getYggzsj() {
-    return yggzsj;
-  }
+    public void setYggzzt(Integer yggzzt) {
+        this.yggzzt = yggzzt;
+    }
 
-  public void setYggzsj(java.sql.Date yggzsj) {
-    this.yggzsj = yggzsj;
-  }
+    public Date getYggzsj() {
+        return yggzsj;
+    }
+
+    public void setYggzsj(Date yggzsj) {
+        this.yggzsj = yggzsj;
+    }
 
 }
+
