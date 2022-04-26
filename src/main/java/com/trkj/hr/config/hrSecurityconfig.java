@@ -25,7 +25,7 @@ public class hrSecurityconfig extends WebSecurityConfigurerAdapter {
                 .withUser("chairman")
                 .password(passwordEncoder.encode("123456"))
                 .roles("c1")
-                .authorities("c");
+                .authorities("c1");
     }
     @Bean
     public PasswordEncoder passwordEncoder() {
