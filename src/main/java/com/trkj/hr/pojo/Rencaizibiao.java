@@ -18,7 +18,7 @@ public class Rencaizibiao implements Serializable {
     
     private String rzsex;
     
-    private Date rzcsrq��;
+    private Date rzcsrq;
     
     private Integer rzage;
     
@@ -63,12 +63,12 @@ public class Rencaizibiao implements Serializable {
         this.rzsex = rzsex;
     }
 
-    public Date getRzcsrq��() {
-        return rzcsrq��;
+    public Date getRzcsrq() {
+        return rzcsrq;
     }
 
-    public void setRzcsrq��(Date rzcsrq��) {
-        this.rzcsrq�� = rzcsrq��;
+    public void setRzcsrq(Date rzcsrq) {
+        this.rzcsrq = rzcsrq;
     }
 
     public Integer getRzage() {
