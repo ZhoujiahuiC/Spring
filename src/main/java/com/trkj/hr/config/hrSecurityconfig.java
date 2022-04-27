@@ -20,12 +20,12 @@ public class hrSecurityconfig extends WebSecurityConfigurerAdapter {
                 .withUser("general_manager")
                 .password(passwordEncoder.encode("123456"))
                 .roles("g1")
-                .authorities("")
+                .authorities("zy")
                 .and()
                 .withUser("chairman")
                 .password(passwordEncoder.encode("123456"))
                 .roles("c1")
-                .authorities("");
+                .authorities("zy");
     }
     @Bean
     public PasswordEncoder passwordEncoder() {
@@ -38,15 +38,18 @@ public class hrSecurityconfig extends WebSecurityConfigurerAdapter {
         http
                 .csrf().disable()
                 .formLogin()
-                .loginPage("")//没有权限的话就跳转到登陆页面
-                .loginProcessingUrl("")//登录提交的地址
-                .usernameParameter("")//与表单的name名一致，用户的名字
-                .passwordParameter("")//与表单的name一致，用户的密码
-                .successForwardUrl("")//登录成功跳到主界面
-                .failureForwardUrl("")//登陆失败跳到错误界面
+                .loginPage("/todl")//没有权限的话就跳转到登陆页面
+                .loginProcessingUrl("/dl")//登录提交的地址
+                .usernameParameter("dlname")//与表单的name名一致，用户的名字
+                .passwordParameter("dlpassword")//与表单的name一致，用户的密码
+                .successForwardUrl("/zy")//登录成功跳到主界面
+                .failureForwardUrl("/erorr")//登陆失败跳到错误界面
                 .and()
                 .authorizeRequests()
-                .antMatchers("")
+                .antMatchers("/todl","/dl","/erorr")
+                .permitAll()
+                .antMatchers("/zy")
+                .hasAnyAuthority("zy")
         ;
     }
 }

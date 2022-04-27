@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class dlController {
     @GetMapping("/todl")
-    public String toDl(){
+    public String toDl() {
         return "todl";
     }
     @PostMapping("/zy")
