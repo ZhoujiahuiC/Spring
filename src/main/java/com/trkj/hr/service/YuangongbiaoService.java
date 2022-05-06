@@ -11,46 +11,6 @@ import org.springframework.data.domain.PageRequest;
  * @since 2022-04-27 14:56:37
  */
 public interface YuangongbiaoService {
-
-    /**
-     * 通过ID查询单条数据
-     *
-     * @param ybh 主键
-     * @return 实例对象
-     */
-    Yuangongbiao queryById(Integer ybh);
-
-    /**
-     * 分页查询
-     *
-     * @param yuangongbiao 筛选条件
-     * @param pageRequest      分页对象
-     * @return 查询结果
-     */
-    Page<Yuangongbiao> queryByPage(Yuangongbiao yuangongbiao, PageRequest pageRequest);
-
-    /**
-     * 新增数据
-     *
-     * @param yuangongbiao 实例对象
-     * @return 实例对象
-     */
-    Yuangongbiao insert(Yuangongbiao yuangongbiao);
-
-    /**
-     * 修改数据
-     *
-     * @param yuangongbiao 实例对象
-     * @return 实例对象
-     */
-    Yuangongbiao update(Yuangongbiao yuangongbiao);
-
-    /**
-     * 通过主键删除数据
-     *
-     * @param ybh 主键
-     * @return 是否成功
-     */
-    boolean deleteById(Integer ybh);
+ boolean selectYg(String yzh,String ymm);
 
 }

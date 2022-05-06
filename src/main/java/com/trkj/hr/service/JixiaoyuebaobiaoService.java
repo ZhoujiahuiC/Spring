@@ -12,45 +12,5 @@ import org.springframework.data.domain.PageRequest;
  */
 public interface JixiaoyuebaobiaoService {
 
-    /**
-     * 通过ID查询单条数据
-     *
-     * @param jxybbh 主键
-     * @return 实例对象
-     */
-    Jixiaoyuebaobiao queryById(Integer jxybbh);
-
-    /**
-     * 分页查询
-     *
-     * @param jixiaoyuebaobiao 筛选条件
-     * @param pageRequest      分页对象
-     * @return 查询结果
-     */
-    Page<Jixiaoyuebaobiao> queryByPage(Jixiaoyuebaobiao jixiaoyuebaobiao, PageRequest pageRequest);
-
-    /**
-     * 新增数据
-     *
-     * @param jixiaoyuebaobiao 实例对象
-     * @return 实例对象
-     */
-    Jixiaoyuebaobiao insert(Jixiaoyuebaobiao jixiaoyuebaobiao);
-
-    /**
-     * 修改数据
-     *
-     * @param jixiaoyuebaobiao 实例对象
-     * @return 实例对象
-     */
-    Jixiaoyuebaobiao update(Jixiaoyuebaobiao jixiaoyuebaobiao);
-
-    /**
-     * 通过主键删除数据
-     *
-     * @param jxybbh 主键
-     * @return 是否成功
-     */
-    boolean deleteById(Integer jxybbh);
 
 }

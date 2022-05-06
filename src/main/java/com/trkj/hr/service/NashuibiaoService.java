@@ -12,45 +12,5 @@ import org.springframework.data.domain.PageRequest;
  */
 public interface NashuibiaoService {
 
-    /**
-     * 通过ID查询单条数据
-     *
-     * @param nsbbh 主键
-     * @return 实例对象
-     */
-    Nashuibiao queryById(Integer nsbbh);
-
-    /**
-     * 分页查询
-     *
-     * @param nashuibiao 筛选条件
-     * @param pageRequest      分页对象
-     * @return 查询结果
-     */
-    Page<Nashuibiao> queryByPage(Nashuibiao nashuibiao, PageRequest pageRequest);
-
-    /**
-     * 新增数据
-     *
-     * @param nashuibiao 实例对象
-     * @return 实例对象
-     */
-    Nashuibiao insert(Nashuibiao nashuibiao);
-
-    /**
-     * 修改数据
-     *
-     * @param nashuibiao 实例对象
-     * @return 实例对象
-     */
-    Nashuibiao update(Nashuibiao nashuibiao);
-
-    /**
-     * 通过主键删除数据
-     *
-     * @param nsbbh 主键
-     * @return 是否成功
-     */
-    boolean deleteById(Integer nsbbh);
 
 }

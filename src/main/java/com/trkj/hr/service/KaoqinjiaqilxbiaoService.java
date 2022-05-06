@@ -12,45 +12,5 @@ import org.springframework.data.domain.PageRequest;
  */
 public interface KaoqinjiaqilxbiaoService {
 
-    /**
-     * 通过ID查询单条数据
-     *
-     * @param kqjqbh 主键
-     * @return 实例对象
-     */
-    Kaoqinjiaqilxbiao queryById(Integer kqjqbh);
-
-    /**
-     * 分页查询
-     *
-     * @param kaoqinjiaqilxbiao 筛选条件
-     * @param pageRequest      分页对象
-     * @return 查询结果
-     */
-    Page<Kaoqinjiaqilxbiao> queryByPage(Kaoqinjiaqilxbiao kaoqinjiaqilxbiao, PageRequest pageRequest);
-
-    /**
-     * 新增数据
-     *
-     * @param kaoqinjiaqilxbiao 实例对象
-     * @return 实例对象
-     */
-    Kaoqinjiaqilxbiao insert(Kaoqinjiaqilxbiao kaoqinjiaqilxbiao);
-
-    /**
-     * 修改数据
-     *
-     * @param kaoqinjiaqilxbiao 实例对象
-     * @return 实例对象
-     */
-    Kaoqinjiaqilxbiao update(Kaoqinjiaqilxbiao kaoqinjiaqilxbiao);
-
-    /**
-     * 通过主键删除数据
-     *
-     * @param kqjqbh 主键
-     * @return 是否成功
-     */
-    boolean deleteById(Integer kqjqbh);
 
 }

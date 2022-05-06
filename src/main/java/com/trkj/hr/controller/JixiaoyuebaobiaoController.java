@@ -18,67 +18,6 @@ import javax.annotation.Resource;
 @RestController
 @RequestMapping("jixiaoyuebaobiao")
 public class JixiaoyuebaobiaoController {
-    /**
-     * 服务对象
-     */
-    @Resource
-    private JixiaoyuebaobiaoService jixiaoyuebaobiaoService;
-
-    /**
-     * 分页查询
-     *
-     * @param jixiaoyuebaobiao 筛选条件
-     * @param pageRequest      分页对象
-     * @return 查询结果
-     */
-    @GetMapping
-    public ResponseEntity<Page<Jixiaoyuebaobiao>> queryByPage(Jixiaoyuebaobiao jixiaoyuebaobiao, PageRequest pageRequest) {
-        return ResponseEntity.ok(this.jixiaoyuebaobiaoService.queryByPage(jixiaoyuebaobiao, pageRequest));
-    }
-
-    /**
-     * 通过主键查询单条数据
-     *
-     * @param id 主键
-     * @return 单条数据
-     */
-    @GetMapping("{id}")
-    public ResponseEntity<Jixiaoyuebaobiao> queryById(@PathVariable("id") Integer id) {
-        return ResponseEntity.ok(this.jixiaoyuebaobiaoService.queryById(id));
-    }
-
-    /**
-     * 新增数据
-     *
-     * @param jixiaoyuebaobiao 实体
-     * @return 新增结果
-     */
-    @PostMapping
-    public ResponseEntity<Jixiaoyuebaobiao> add(Jixiaoyuebaobiao jixiaoyuebaobiao) {
-        return ResponseEntity.ok(this.jixiaoyuebaobiaoService.insert(jixiaoyuebaobiao));
-    }
-
-    /**
-     * 编辑数据
-     *
-     * @param jixiaoyuebaobiao 实体
-     * @return 编辑结果
-     */
-    @PutMapping
-    public ResponseEntity<Jixiaoyuebaobiao> edit(Jixiaoyuebaobiao jixiaoyuebaobiao) {
-        return ResponseEntity.ok(this.jixiaoyuebaobiaoService.update(jixiaoyuebaobiao));
-    }
-
-    /**
-     * 删除数据
-     *
-     * @param id 主键
-     * @return 删除是否成功
-     */
-    @DeleteMapping
-    public ResponseEntity<Boolean> deleteById(Integer id) {
-        return ResponseEntity.ok(this.jixiaoyuebaobiaoService.deleteById(id));
-    }
 
 }
 
