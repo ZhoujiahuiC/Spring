@@ -1,6 +1,13 @@
 package com.trkj.hr.pojo;
 
+import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.annotation.TableField;
+import com.baomidou.mybatisplus.annotation.TableId;
+import com.baomidou.mybatisplus.annotation.TableName;
+import lombok.Data;
+
 import java.io.Serializable;
+import java.util.List;
 
 /**
  * (Shebaofananbiao)实体类
@@ -8,9 +15,11 @@ import java.io.Serializable;
  * @author makejava
  * @since 2022-04-26 19:40:43
  */
-public class Shebaofananbiao implements Serializable {
-    private static final long serialVersionUID = -18939371336771667L;
-    
+@Data
+@TableName(value = "shebaofananbiao")
+public class Shebaofananbiao  {
+//    @TableId(type = IdType.AUTO)
+    @TableId(type = IdType.AUTO)
     private Integer sbbh;
     
     private Integer shjlbh;
@@ -19,38 +28,9 @@ public class Shebaofananbiao implements Serializable {
     
     private String sbmc;
 
+    private Integer  isuse;
 
-    public Integer getSbbh() {
-        return sbbh;
-    }
-
-    public void setSbbh(Integer sbbh) {
-        this.sbbh = sbbh;
-    }
-
-    public Integer getShjlbh() {
-        return shjlbh;
-    }
-
-    public void setShjlbh(Integer shjlbh) {
-        this.shjlbh = shjlbh;
-    }
-
-    public Integer getShbid() {
-        return shbid;
-    }
-
-    public void setShbid(Integer shbid) {
-        this.shbid = shbid;
-    }
-
-    public String getSbmc() {
-        return sbmc;
-    }
-
-    public void setSbmc(String sbmc) {
-        this.sbmc = sbmc;
-    }
-
+    @TableField("false")
+    private List<Shebaojishubiao> js;
 }
 

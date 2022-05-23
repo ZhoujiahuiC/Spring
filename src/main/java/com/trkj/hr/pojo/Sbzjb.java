@@ -1,5 +1,8 @@
 package com.trkj.hr.pojo;
 
+import com.baomidou.mybatisplus.annotation.TableField;
+import lombok.Data;
+
 import java.io.Serializable;
 
 /**
@@ -8,29 +11,15 @@ import java.io.Serializable;
  * @author makejava
  * @since 2022-04-26 19:40:43
  */
-public class Sbzjb implements Serializable {
-    private static final long serialVersionUID = -73704276631222190L;
+@Data
+public class Sbzjb {
     
     private Integer sbbh;
-    
     private Integer sbjsbh;
-
-
-    public Integer getSbbh() {
-        return sbbh;
-    }
-
-    public void setSbbh(Integer sbbh) {
-        this.sbbh = sbbh;
-    }
-
-    public Integer getSbjsbh() {
-        return sbjsbh;
-    }
-
-    public void setSbjsbh(Integer sbjsbh) {
-        this.sbjsbh = sbjsbh;
-    }
+    @TableField("false")
+    private Shebaofananbiao shebaofananbiao;
+    @TableField("false")
+    private Shebaojishubiao shebaojishubiao;
 
 }
 

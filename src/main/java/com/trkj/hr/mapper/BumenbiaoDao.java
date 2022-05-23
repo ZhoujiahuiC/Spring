@@ -3,9 +3,10 @@ package com.trkj.hr.mapper;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.trkj.hr.pojo.Bumenbiao;
 import org.apache.ibatis.annotations.Mapper;
-import org.apache.ibatis.annotations.Param;
-import org.springframework.data.domain.Pageable;
+import org.apache.ibatis.annotations.Select;
+
 import java.util.List;
+
 
 /**
  * (Bumenbiao)表数据库访问层
@@ -15,7 +16,7 @@ import java.util.List;
  */
 @Mapper
 public interface BumenbiaoDao extends BaseMapper<Bumenbiao> {
-
-
+    @Select("SELECT bmmc,bmjs FROM bumenbiao")
+    List<Bumenbiao> selectbmmc();
 }
 

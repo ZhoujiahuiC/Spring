@@ -1,8 +1,8 @@
 package com.trkj.hr.service;
 
 import com.trkj.hr.pojo.Rencaizibiao;
-import org.springframework.data.domain.Page;
-import org.springframework.data.domain.PageRequest;
+
+import java.util.List;
 
 /**
  * (Rencaizibiao)表服务接口
@@ -11,5 +11,8 @@ import org.springframework.data.domain.PageRequest;
  * @since 2022-04-27 14:56:18
  */
 public interface RencaizibiaoService {
-
+    //统计男女人数
+    List<Rencaizibiao> tjnv();
+    //修改信息
+    int updaterenzi (Rencaizibiao rencaizibiao);
 }

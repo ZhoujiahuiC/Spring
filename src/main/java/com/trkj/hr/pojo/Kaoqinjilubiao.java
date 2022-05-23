@@ -1,7 +1,12 @@
 package com.trkj.hr.pojo;
 
+import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.annotation.TableId;
+import com.baomidou.mybatisplus.annotation.TableName;
+import com.fasterxml.jackson.annotation.JsonFormat;
+import lombok.Data;
 import java.util.Date;
-import java.io.Serializable;
+
 
 /**
  * (Kaoqinjilubiao)实体类
@@ -9,79 +14,24 @@ import java.io.Serializable;
  * @author makejava
  * @since 2022-04-26 19:40:43
  */
-public class Kaoqinjilubiao implements Serializable {
-    private static final long serialVersionUID = -81796200603414517L;
-    
+@Data
+@TableName("Kaoqinjilubiao")
+public class Kaoqinjilubiao  {
+    @TableId(type = IdType.AUTO)
     private Integer kqjlbh;
     
     private Integer ybh;
-    
+
     private Date kqsbdksj;
     
     private Integer kqsbzt;
-    
+
     private Date kqxbdksj;
     
     private Integer kqxbzt;
-    
+    @JsonFormat(pattern="yyyy-MM-dd",timezone = "GMT+8")
     private Date xzsj;
 
-
-    public Integer getKqjlbh() {
-        return kqjlbh;
-    }
-
-    public void setKqjlbh(Integer kqjlbh) {
-        this.kqjlbh = kqjlbh;
-    }
-
-    public Integer getYbh() {
-        return ybh;
-    }
-
-    public void setYbh(Integer ybh) {
-        this.ybh = ybh;
-    }
-
-    public Date getKqsbdksj() {
-        return kqsbdksj;
-    }
-
-    public void setKqsbdksj(Date kqsbdksj) {
-        this.kqsbdksj = kqsbdksj;
-    }
-
-    public Integer getKqsbzt() {
-        return kqsbzt;
-    }
-
-    public void setKqsbzt(Integer kqsbzt) {
-        this.kqsbzt = kqsbzt;
-    }
-
-    public Date getKqxbdksj() {
-        return kqxbdksj;
-    }
-
-    public void setKqxbdksj(Date kqxbdksj) {
-        this.kqxbdksj = kqxbdksj;
-    }
-
-    public Integer getKqxbzt() {
-        return kqxbzt;
-    }
-
-    public void setKqxbzt(Integer kqxbzt) {
-        this.kqxbzt = kqxbzt;
-    }
-
-    public Date getXzsj() {
-        return xzsj;
-    }
-
-    public void setXzsj(Date xzsj) {
-        this.xzsj = xzsj;
-    }
-
+    private String kqcx;
 }
 

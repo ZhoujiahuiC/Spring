@@ -4,8 +4,7 @@ import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.trkj.hr.pojo.Kaoqinjilubiao;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
-import org.springframework.data.domain.Pageable;
-import java.util.List;
+
 
 /**
  * (Kaoqinjilubiao)表数据库访问层
@@ -15,7 +14,6 @@ import java.util.List;
  */
 @Mapper
 public interface KaoqinjilubiaoDao extends BaseMapper<Kaoqinjilubiao> {
-
 
 }
 

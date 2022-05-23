@@ -20,9 +20,10 @@ public class AppCorsConfiguration {
         log.debug("开始设置");
         CorsConfiguration appCorsConfiguration = new CorsConfiguration();
         // 允许的请求源
-        appCorsConfiguration.addAllowedOrigin("http://localhost:8089");
-        appCorsConfiguration.addAllowedOrigin("http://127.0.0.1:8088");
+        appCorsConfiguration.addAllowedOrigin("*");
+      //  appCorsConfiguration.addAllowedOrigin("http://127.0.0.1:8088");
         appCorsConfiguration.addAllowedHeader("*"); // 2允许任何头
+        appCorsConfiguration.addAllowedHeader("jwtAuth");
         // 允许的请求的方法
         appCorsConfiguration.addAllowedMethod("OPTIONS");
         appCorsConfiguration.addAllowedMethod("HEAD");

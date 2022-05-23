@@ -16,4 +16,19 @@ spring:
     driver-class-name: com.mysql.cj.jdbc.Driver
     # 使用druid数据源
     type: com.alibaba.druid.pool.DruidDataSource
-
+  redis:
+    host: 127.0.0.1
+    port: 6379
+    password: 123456
+jwt:
+  # 密匙KEY
+  secret: JWTSecret
+  # HeaderKEY
+  header: token
+  # Token前缀字符
+  tokenPrefix: Security-c
+  # 过期时间毫秒
+  expire: 60000000
+mybatis-plus:
+  configuration:
+    map-underscore-to-camel-case: false

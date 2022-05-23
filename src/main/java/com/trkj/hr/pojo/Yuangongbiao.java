@@ -1,10 +1,20 @@
 package com.trkj.hr.pojo;
 
+import com.alibaba.fastjson.annotation.JSONField;
+import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
+import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.Data;
+import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.authority.SimpleGrantedAuthority;
+import org.springframework.security.core.userdetails.UserDetails;
 
 import java.io.Serializable;
+import java.util.Collection;
+import java.util.Date;
+import java.util.List;
+import java.util.stream.Collectors;
 
 /**
  * (Yuangongbiao)实体类
@@ -14,7 +24,7 @@ import java.io.Serializable;
  */
 @Data
 @TableName(value = "yuangongbiao")
-public class Yuangongbiao  {
+public class Yuangongbiao  implements UserDetails {
 
     @TableId
 
@@ -33,6 +43,70 @@ public class Yuangongbiao  {
     private String yzh;
     
     private String ymm;
+    @JsonFormat(pattern="yyyy-MM-dd",timezone = "GMT+8")
+    private Date ygrzrq;
+    @TableField("false")
+    private Rencaizibiao rencaizibiao;
+    @TableField("false")
+    private List<String> permissions;
+//    public Yuangongbiao( List<String> permissions) {
+//        this.permissions = permissions;
+//    }
+    public List<String> setPermissions() {
+        return permissions;
+    }
+
+    public void setPermissions(List<String> permissions) {
+        this.permissions = permissions;
+    }
+
+    //成员变量
+    @TableField("false")
+    @JSONField(serialize = false)
+    private List<SimpleGrantedAuthority> authorities;
+
+    @Override
+    public Collection<? extends GrantedAuthority> getAuthorities() {
+        if (authorities!=null){
+            return authorities;
+        }
+        if(permissions!=null){
+            authorities=permissions.stream()
+                    .map(SimpleGrantedAuthority::new)
+                    .collect(Collectors.toList());
+        }
+        return authorities;
+    }
+
+    @Override
+    public String getPassword() {
+        return getYmm();
+    }
+
+    @Override
+    public String getUsername() {
+        return getYzh();
+    }
+
+    @Override
+    public boolean isAccountNonExpired() {
+        return true;
+    }
+
+    @Override
+    public boolean isAccountNonLocked() {
+        return true;
+    }
+
+    @Override
+    public boolean isCredentialsNonExpired() {
+        return true;
+    }
+
+    @Override
+    public boolean isEnabled() {
+        return true;
+    }
 
 //
 //    public Integer getYbh() {
@@ -98,6 +172,15 @@ public class Yuangongbiao  {
 //    public void setYmm(String ymm) {
 //        this.ymm = ymm;
 //    }
-
+    @TableField("false")
+    private Integer zs;
+    @TableField("false")
+    private Integer sx;
+    @TableField("false")
+    private Integer dlz;
+    @TableField("false")
+    private Integer drz;
+    @TableField("false")
+    private Integer ylz;
 }
 
