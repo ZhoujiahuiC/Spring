@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.trkj.hr.mapper.MenuDao">
+    <resultMap id="BaseResultMap" type="com.trkj.hr.pojo.Menu">
+        <id column="menu_id" jdbcType="INTEGER" property="menu_id" />
+        <result column="menu_z_id" jdbcType="INTEGER" property="menu_z_id" />
+        <result column="menu_name" jdbcType="VARCHAR" property="menu_name" />
+        <result column="url" jdbcType="VARCHAR" property="url" />
+        <result column="component_name" jdbcType="VARCHAR" property="component_name" />
+        <result column="component_path" jdbcType="VARCHAR" property="component_path" />
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        m.menu_id, m.menu_z_id, m.menu_name, m.url, m.component_name, m.component_path
+    </sql>
+
+    <select id="findBymenu" parameterType="collection" resultType="java.lang.String">
+        SELECT m.url
+        FROM menu m
+        LEFT JOIN role_menu rm ON m.menu_id = rm.menu_id
+        LEFT JOIN role r ON r.role_id = rm.role_id
+        <trim prefix="WHERE r.role_name IN">
+            <foreach collection='role_name' item='role_name' open='(' separator=',' close=')'>
+                #{role_name}
+            </foreach>
+        </trim>
+    </select>
+
+    <select id="findBymenus" parameterType="collection" resultMap="BaseResultMap">
+        SELECT <include refid="Base_Column_List"/>
+        FROM menu m
+        LEFT JOIN role_menu rm ON m.menu_id = rm.menu_id
+        LEFT JOIN role r ON r.role_id = rm.role_id
+        <trim prefix="WHERE r.role_name IN">
+            <foreach collection='role_name' item='role_name' open='(' separator=',' close=')'>
+                #{role_name}
+            </foreach>
+        </trim>
+    </select>
+</mapper>

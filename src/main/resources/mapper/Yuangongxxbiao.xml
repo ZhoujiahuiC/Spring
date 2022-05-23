@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.trkj.hr.mapper.YuangongxxbiaoDao">
+    <resultMap id="BaseResultMap" type="com.trkj.hr.pojo.ygxxbiao">
+        <id column="ybh" jdbcType="INTEGER" property="ybh" />
+        <result column="bcbh" jdbcType="INTEGER" property="bcbh" />
+        <result column="rzbh" jdbcType="INTEGER" property="rzbh" />
+        <result column="zwbh" jdbcType="INTEGER" property="zwbh" />
+        <result column="sbbh" jdbcType="INTEGER" property="sbbh" />
+        <result column="ygzt" jdbcType="INTEGER" property="ygzt" />
+        <result column="yzh" jdbcType="VARCHAR" property="yzh" />
+        <result column="ymm" jdbcType="VARCHAR" property="ymm" />
+        <result column="rzname" jdbcType="VARCHAR" property="rzname" />
+        <result column="rzsex" jdbcType="VARCHAR" property="rzsex" />
+        <result column="rzcsrq"  property="rzcsrq" />
+        <result column="rzage" jdbcType="INTEGER" property="rzage" />
+        <result column="rzxl" jdbcType="VARCHAR" property="rzxl" />
+        <result column="rzsfz" jdbcType="VARCHAR" property="rzsfz" />
+        <result column="rzphone" jdbcType="VARCHAR" property="rzphone" />
+        <result column="rzgzjl" jdbcType="VARCHAR" property="rzgzjl" />
+        <result column="rzhyzk" jdbcType="VARCHAR" property="rzhyzk" />
+        <result column="rzmz" jdbcType="VARCHAR" property="rzmz" />
+        <result column="rzzzmm" jdbcType="VARCHAR" property="rzzzmm" />
+        <result column="rzqqyx" jdbcType="VARCHAR" property="rzqqyx" />
+        <result column="sbmc" jdbcType="VARCHAR" property="sbmc" />
+        <result column="zwmc" jdbcType="VARCHAR" property="zwmc" />
+        <result column="bcmc" jdbcType="VARCHAR" property="bcmc" />
+        <result column="bckssj" jdbcType="VARCHAR" property="bckssj" />
+        <result column="bcjssj" jdbcType="VARCHAR" property="bcjssj" />
+        <result column="bmmc" jdbcType="VARCHAR" property="bmmc" />
+    </resultMap>
+    <select id="selctyuangongbiao" parameterType="int" resultMap="BaseResultMap">
+        select a.*,b.rzname,b.rzsex,b.rzcsrq,b.rzage,b.rzxl,b.rzsfz,b.rzphone,b.rzdz,b.rzgzjl,b.rzhyzk,b.rzmz,b.rzzzmm,b.rzqqyx,c.bcmc,c.bckssj,c.bcjssj,d.sbmc,e.zwmc,f.bmmc
+        from yuangongbiao as a inner join Rencaizibiao as b inner join bancibiao as c inner join shebaofananbiao as d inner join zhiweibiao as e inner join bumenbiao as f
+        on a.rzbh= b.rzbh and a.bcbh=c.bcbh and a.sbbh=d.sbbh and a.zwbh= e.zwbh and e.bmbh=f.bmbh
+        where a.ybh=#{ybh};
+    </select>
+<!--    <select id="selctyuangongguanli"  resultMap="BaseResultMap">-->
+<!--        select a.*,b.rzname,b.rzsex,b.rzcsrq,b.rzage,b.rzxl,b.rzsfz,b.rzphone,b.rzgzjl,b.rzhyzk,b.rzmz,b.rzzzmm,c.bcmc,d.sbmc,e.zwmc-->
+<!--        from yuangongbiao as a inner join Rencaizibiao as b inner join bancibiao as c inner join shebaofananbiao as d inner join zhiweibiao as e-->
+<!--        on a.ybh= b.rzbh=c.bcbh=d.sbbh=e.zwbh-->
+<!--        WHERE b.rzname like "%"+"#{rzname,jdbcType=VARCHAR}"+"%"-->
+<!--    </select>-->
+</mapper>
