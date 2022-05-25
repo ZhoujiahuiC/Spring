@@ -24,6 +24,6 @@ public interface KaoqinjilubiaoService {
     int updatekq( String kqcx);
     //正常下班打卡修改
     int updatekq1( String kqcx);
-    //查询所有的考勤记录
-    List<Kaoqinjilubiao> selectkq();
+    //根据ybh查询员工的考勤记录
+    List<Kaoqinjilubiao> selectkq(int ybh);
 }

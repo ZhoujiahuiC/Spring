@@ -2,6 +2,8 @@ package com.trkj.hr.controller;
 
 import com.trkj.hr.pojo.Chuchaibiao;
 import com.trkj.hr.service.ChuchaibiaoService;
+import com.trkj.hr.vo.AjaxResponse;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.http.ResponseEntity;
@@ -16,9 +18,13 @@ import javax.annotation.Resource;
  * @since 2022-04-27 14:53:58
  */
 @RestController
-@RequestMapping("chuchaibiao")
 public class ChuchaibiaoController {
-
+    @Autowired
+    private ChuchaibiaoService chuchaibiaoService;
+    @GetMapping("/selectchuchai")
+    public AjaxResponse selectchuchai(int pageNum, int pageSize, int ybh){
+        return AjaxResponse.success(chuchaibiaoService.selectchuchai(pageNum,pageSize,ybh));
+    }
 
 }
 

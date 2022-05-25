@@ -48,13 +48,14 @@ public class KaoqinjilubiaoController {
     //正常下班打卡修改
     @GetMapping("/updatkaoqin1")
     @PreAuthorize("hasAuthority('/attendanceManagement')")
+    //根据ybh查询员工的考勤记录
     public AjaxResponse update1( String kqcx ){
         return AjaxResponse.success(kaoqinjilubiaoService.updatekq1(kqcx));
     }
     @GetMapping("selectkq")
     @PreAuthorize("hasAuthority('/attendanceManagement')")
-    public AjaxResponse selectkq(){
-        return AjaxResponse.success(kaoqinjilubiaoService.selectkq());
+    public AjaxResponse selectkq(int ybh){
+        return AjaxResponse.success(kaoqinjilubiaoService.selectkq(ybh));
     }
 }
 

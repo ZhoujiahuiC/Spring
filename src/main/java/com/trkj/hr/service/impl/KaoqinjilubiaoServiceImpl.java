@@ -63,10 +63,12 @@ public class KaoqinjilubiaoServiceImpl implements KaoqinjilubiaoService {
         return update;
     }
 
+    //根据ybh查询员工的考勤记录
     @Override
-    public List<Kaoqinjilubiao> selectkq() {
-        return kaoqinjilubiaoDao.selectList(null);
+    public List<Kaoqinjilubiao> selectkq(int ybh) {
+        QueryWrapper<Kaoqinjilubiao> queryWrapper=new QueryWrapper<>();
+        queryWrapper.eq("ybh",ybh);
+        return kaoqinjilubiaoDao.selectList(queryWrapper);
     }
-
 
 }
