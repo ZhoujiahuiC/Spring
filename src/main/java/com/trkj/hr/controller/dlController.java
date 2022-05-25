@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.*;
 public class dlController {
     @Autowired
     private YuangongbiaoService yuangongbiaoService;
+    //登录
     @PostMapping("/selectYuanGong")
     public AjaxResponse selectYuangong(@RequestBody Yuangongbiao yuangongbiao){
         return yuangongbiaoService.selectYg(yuangongbiao);

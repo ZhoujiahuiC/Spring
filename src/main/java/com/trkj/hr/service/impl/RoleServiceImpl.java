@@ -26,4 +26,15 @@ public class RoleServiceImpl implements RoleService {
 
         return roleDao.updateById(role);
     }
+
+    @Override
+    public int insertRole(Role role) {
+        return roleDao.insert(role);
+    }
+
+    @Override
+    public int delectRole(int role_id) {
+        return roleDao.deleteById(role_id);
+    }
+
 }
