@@ -62,4 +62,9 @@ public class ygxxbiao {
     private String bcjssj;
 
     private String bmmc;
+
+    @JsonFormat(pattern="yyyy-MM-dd",timezone = "GMT+8")
+    private Date ygrzrq;
+
+    private String tp;
 }

@@ -29,9 +29,10 @@
         <result column="bckssj" jdbcType="VARCHAR" property="bckssj" />
         <result column="bcjssj" jdbcType="VARCHAR" property="bcjssj" />
         <result column="bmmc" jdbcType="VARCHAR" property="bmmc" />
+        <result column="tp" jdbcType="VARCHAR" property="tp" />
     </resultMap>
     <select id="selctyuangongbiao" parameterType="int" resultMap="BaseResultMap">
-        select a.*,b.rzname,b.rzsex,b.rzcsrq,b.rzage,b.rzxl,b.rzsfz,b.rzphone,b.rzdz,b.rzgzjl,b.rzhyzk,b.rzmz,b.rzzzmm,b.rzqqyx,c.bcmc,c.bckssj,c.bcjssj,d.sbmc,e.zwmc,f.bmmc
+        select a.*,b.rzname,b.rzsex,b.rzcsrq,b.rzage,b.rzxl,b.rzsfz,b.rzphone,b.rzdz,b.rzgzjl,b.rzhyzk,b.rzmz,b.rzzzmm,b.rzqqyx,b.tp,c.bcmc,c.bckssj,c.bcjssj,d.sbmc,e.zwmc,f.bmmc
         from yuangongbiao as a inner join Rencaizibiao as b inner join bancibiao as c inner join shebaofananbiao as d inner join zhiweibiao as e inner join bumenbiao as f
         on a.rzbh= b.rzbh and a.bcbh=c.bcbh and a.sbbh=d.sbbh and a.zwbh= e.zwbh and e.bmbh=f.bmbh
         where a.ybh=#{ybh};

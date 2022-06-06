@@ -23,7 +23,7 @@ public class ChuchaibiaoServiceImpl implements ChuchaibiaoService {
     //根据分页查询该员工的出差记录
     @Override
     public IPage<Chuchaibiao> selectchuchai(int pageNum, int pageSize, int ybh) {
-        com.baomidou.mybatisplus.extension.plugins.pagination.Page<Chuchaibiao> page= new Page<>(pageNum,pageSize);
+        Page<Chuchaibiao> page= new Page<>(pageNum,pageSize);
         QueryWrapper<Chuchaibiao> queryWrapper=new QueryWrapper<>();
         queryWrapper.eq("ybh",ybh);
         IPage<Chuchaibiao> iPage=chuchaibiaoDao.selectPage(page,queryWrapper);

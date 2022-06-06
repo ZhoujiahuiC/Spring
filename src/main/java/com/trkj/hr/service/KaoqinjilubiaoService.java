@@ -26,4 +26,6 @@ public interface KaoqinjilubiaoService {
     int updatekq1( String kqcx);
     //根据ybh查询员工的考勤记录
     List<Kaoqinjilubiao> selectkq(int ybh);
+    //定时添加考勤记录
+    int adddingshi();
 }

@@ -22,9 +22,9 @@ public interface YuangongxxbiaoDao extends BaseMapper<ygxxbiao> {
     //根据id查询个人信息
     List<ygxxbiao> selctyuangongbiao(@Param("ybh") int ybh);
     //分页查询员工信息可根据name模糊查询
-    @Select("select a.*,b.rzname,b.rzsex,b.rzcsrq,b.rzage,b.rzxl,b.rzsfz,b.rzphone,b.rzdz,b.rzgzjl,b.rzhyzk,b.rzmz,b.rzzzmm,b.rzqqyx,c.bcmc,c.bckssj,c.bcjssj,d.sbmc,e.zwmc,f.bmmc   from yuangongbiao as a inner join Rencaizibiao as b inner join bancibiao as c inner join shebaofananbiao as d inner join zhiweibiao as e inner join bumenbiao as f on a.rzbh= b.rzbh and a.bcbh=c.bcbh and a.sbbh=d.sbbh and a.zwbh= e.zwbh and e.bmbh=f.bmbh ${ew.customSqlSegment}")
+    @Select("select a.*,b.rzname,b.rzsex,b.rzcsrq,b.rzage,b.rzxl,b.rzsfz,b.rzphone,b.rzdz,b.rzgzjl,b.rzhyzk,b.rzmz,b.rzzzmm,b.rzqqyx,b.tp,c.bcmc,c.bckssj,c.bcjssj,d.sbmc,e.zwmc,f.bmmc   from yuangongbiao as a inner join Rencaizibiao as b inner join bancibiao as c inner join shebaofananbiao as d inner join zhiweibiao as e inner join bumenbiao as f on a.rzbh= b.rzbh and a.bcbh=c.bcbh and a.sbbh=d.sbbh and a.zwbh= e.zwbh and e.bmbh=f.bmbh ${ew.customSqlSegment}")
     IPage<ygxxbiao> selctyuangongguanli(Page<ygxxbiao> page, @Param(Constants.WRAPPER)QueryWrapper<ygxxbiao> queryWrapper);
     //根据员工状态分页查询
-    @Select("select a.*,b.rzname,b.rzsex,b.rzcsrq,b.rzage,b.rzxl,b.rzsfz,b.rzphone,b.rzdz,b.rzgzjl,b.rzhyzk,b.rzmz,b.rzzzmm,b.rzqqyx,c.bcmc,c.bckssj,c.bcjssj,d.sbmc,e.zwmc,f.bmmc   from yuangongbiao as a inner join Rencaizibiao as b inner join bancibiao as c inner join shebaofananbiao as d inner join zhiweibiao as e inner join bumenbiao as f on a.rzbh= b.rzbh and a.bcbh=c.bcbh and a.sbbh=d.sbbh and a.zwbh= e.zwbh and e.bmbh=f.bmbh ${ew.customSqlSegment}")
+    @Select("select a.*,b.rzname,b.rzsex,b.rzcsrq,b.rzage,b.rzxl,b.rzsfz,b.rzphone,b.rzdz,b.rzgzjl,b.rzhyzk,b.rzmz,b.rzzzmm,b.rzqqyx,b.tp,c.bcmc,c.bckssj,c.bcjssj,d.sbmc,e.zwmc,f.bmmc   from yuangongbiao as a inner join Rencaizibiao as b inner join bancibiao as c inner join shebaofananbiao as d inner join zhiweibiao as e inner join bumenbiao as f on a.rzbh= b.rzbh and a.bcbh=c.bcbh and a.sbbh=d.sbbh and a.zwbh= e.zwbh and e.bmbh=f.bmbh ${ew.customSqlSegment}")
     IPage<ygxxbiao> selectygzt(Page<ygxxbiao> page, @Param(Constants.WRAPPER)QueryWrapper<ygxxbiao> queryWrapper);
 }

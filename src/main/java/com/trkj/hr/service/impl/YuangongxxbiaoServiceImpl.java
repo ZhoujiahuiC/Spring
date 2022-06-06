@@ -12,7 +12,9 @@ import com.trkj.hr.service.YuangongxxbiaoService;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import org.springframework.stereotype.Service;
+import org.springframework.util.StringUtils;
 
+import java.util.Date;
 import java.util.List;
 @Service("YuangongxxbiaoService")
 public class YuangongxxbiaoServiceImpl implements YuangongxxbiaoService {
@@ -25,19 +27,19 @@ public class YuangongxxbiaoServiceImpl implements YuangongxxbiaoService {
     }
     //分页查询员工信息可根据name模糊查询
     @Override
-    public IPage<ygxxbiao> selctyuangongguanli(int pageNum, int pageSize,String rzname) {
+    public IPage<ygxxbiao> selctyuangongguanli(int pageNum, int pageSize,  String rzname, String bmmc, String rzxl ,String ygrzrq) {
         Page<ygxxbiao> page= new Page<>(pageNum,pageSize);
         QueryWrapper<ygxxbiao> queryWrapper=new QueryWrapper<>();
-        queryWrapper.like("b.rzname","%"+rzname+"%");
+        queryWrapper.like("b.rzname",rzname).like("f.bmmc",bmmc).like("b.rzxl",rzxl).gt("a.ygrzrq",ygrzrq);
         IPage<ygxxbiao> iPage=yuangongxxbiaoDao.selctyuangongguanli(page,queryWrapper);
         return iPage;
     }
     //根据员工状态查询
     @Override
-    public IPage<ygxxbiao> selectygzt(int pageNum, int pageSize, int ygzt) {
+    public IPage<ygxxbiao> selectygzt(int pageNum, int pageSize, int ygzt, String rzname, String bmmc, String rzxl ,String ygrzrq) {
         Page<ygxxbiao> page= new Page<>(pageNum,pageSize);
         QueryWrapper<ygxxbiao> queryWrapper=new QueryWrapper<>();
-        queryWrapper.eq("ygzt",ygzt);
+        queryWrapper.like("ygzt",ygzt).like("b.rzname",rzname).like("f.bmmc",bmmc).like("b.rzxl",rzxl).gt("a.ygrzrq",ygrzrq);
         IPage<ygxxbiao> iPage=yuangongxxbiaoDao.selectygzt(page,queryWrapper);
         return iPage;
     }
