@@ -6,4 +6,5 @@ import java.util.List;
 
 public interface LiuchengrenyuanService {
     List<Liuchengrenyuan> renyuan();
+    int updataxx(Integer ybh,Integer nodeid);
 }
