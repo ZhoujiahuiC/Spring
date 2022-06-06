@@ -1,5 +1,6 @@
 package com.trkj.hr.pojo;
 
+import com.baomidou.mybatisplus.annotation.TableField;
 import lombok.Data;
 
 import java.util.ArrayList;
@@ -13,6 +14,10 @@ public class Menu {
     private String url;
     private String component_name;
     private String component_path;
+    @TableField("false")
     private List<Menu> asideChildren = new ArrayList<Menu>();
+    @TableField("false")
     private List<String> list=new ArrayList<>();
+    @TableField("false")
+    private  boolean disabled;
 }

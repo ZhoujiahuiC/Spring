@@ -182,5 +182,8 @@ public class Yuangongbiao  implements UserDetails {
     private Integer drz;
     @TableField("false")
     private Integer ylz;
+    @TableField("false")
+    private Boolean disabled;
+    private int iscb;
 }
 

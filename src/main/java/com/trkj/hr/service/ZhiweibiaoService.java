@@ -4,6 +4,8 @@ import com.trkj.hr.pojo.Zhiweibiao;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 
+import java.util.List;
+
 /**
  * (Zhiweibiao)表服务接口
  *
@@ -11,6 +13,6 @@ import org.springframework.data.domain.PageRequest;
  * @since 2022-04-27 14:56:37
  */
 public interface ZhiweibiaoService {
-
+    List<Zhiweibiao> selectBatchById(int bmbh);
 
 }

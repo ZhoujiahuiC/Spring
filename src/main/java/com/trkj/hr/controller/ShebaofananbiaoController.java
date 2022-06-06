@@ -20,7 +20,6 @@ import java.util.List;
 public class ShebaofananbiaoController {
     @Autowired
     private ShebaofananbiaoService shebaofananbiaoService;
-
     //社保方案查询
     @GetMapping("/socialSecurity")
     @PreAuthorize("hasAuthority('/socialSecurityManagement')")

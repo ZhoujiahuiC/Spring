@@ -6,6 +6,7 @@ import com.trkj.hr.mapper.BumenbiaoDao;
 import com.trkj.hr.pojo.Bumenbiao;
 import com.trkj.hr.service.BumenbiaoService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -49,6 +50,7 @@ public class BumenbiaoServiceImpl implements BumenbiaoService {
         return bumenbiaoDao.updateById(bumenbiao);
     }
     //查询所有的部门名称
+
     @Override
     public List<Bumenbiao> selectbmmc() {
         List<Bumenbiao> bumenbiaoList = bumenbiaoDao.selectList(null);

@@ -4,8 +4,10 @@ import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.core.toolkit.CollectionUtils;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
+import com.trkj.hr.mapper.Yg_RoleDao;
 import com.trkj.hr.mapper.YuangonVoDao;
 import com.trkj.hr.pojo.Menu;
+import com.trkj.hr.pojo.Yg_Role;
 import com.trkj.hr.pojo.Yuangongbiao;
 import com.trkj.hr.mapper.YuangongbiaoDao;
 import com.trkj.hr.service.MenuService;
@@ -38,6 +40,8 @@ public class YuangongbiaoServiceImpl implements YuangongbiaoService {
     private YuangongbiaoDao yuangongbiaoDao;
     @Autowired
     private YuangonVoDao yuangonVoDao;
+    @Autowired
+    private Yg_RoleDao yg_roleDao;
     @Autowired
     private RedisUtil redisUtil;
     @Override
@@ -78,13 +82,39 @@ public class YuangongbiaoServiceImpl implements YuangongbiaoService {
     }
 
     @Override
+    public List<Yuangongbiao> selectListYg(int role_id) {
+        List<Yuangongbiao> yuangongbiaos = yuangongbiaoDao.selectList(null);
+        QueryWrapper<Yg_Role> queryWrapper=new QueryWrapper<>();
+        queryWrapper.eq("role_id",role_id);
+        List<Yg_Role> yg_roles = yg_roleDao.selectList(queryWrapper);
+        for (Yuangongbiao y:yuangongbiaos) {
+            for (Yg_Role yr:yg_roles) {
+                if (y.getYbh()==yr.getYbh()){
+                    y.setDisabled(true);
+                    break;
+                }
+                y.setDisabled(false);
+            }
+
+        }
+        return yuangongbiaos;
+    }
+    //分页条件查询所有员工社保信息
+    @Override
     public IPage<YuangonVo> selPageAllEmpSb(int pageNum, int pageSize, String rzname, String sbmc) {
         Page<YuangonVo> page=new Page<>(pageNum,pageSize);
         QueryWrapper<YuangonVo> queryWrapper=new QueryWrapper<>();
         queryWrapper.like("b.rzname",rzname).like("d.sbmc",sbmc);
-        IPage<YuangonVo> iPage=yuangonVoDao.selPageAllEmpSb(page,queryWrapper);
+        IPage<YuangonVo> iPage=yuangongbiaoDao.selPageAllEmpSb(page,queryWrapper);
         log.debug("ipage:{}", CollectionUtils.isEmpty(iPage.getRecords()));
-
         return iPage;
+    }
+    @Override
+    public int upEmpsbfa(Integer ybh,Integer sbbh ) {
+        Yuangongbiao yuangongbiao=new Yuangongbiao();
+        yuangongbiao.setYbh(ybh);
+        yuangongbiao.setSbbh(sbbh);
+        yuangongbiao.setIscb(1);
+        return yuangongbiaoDao.upEmpcbfa(ybh,sbbh);
     }
 }

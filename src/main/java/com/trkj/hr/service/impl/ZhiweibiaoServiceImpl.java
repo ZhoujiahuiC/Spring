@@ -9,6 +9,7 @@ import org.springframework.data.domain.PageImpl;
 import org.springframework.data.domain.PageRequest;
 
 import javax.annotation.Resource;
+import java.util.List;
 
 /**
  * (Zhiweibiao)表服务实现类
@@ -18,5 +19,10 @@ import javax.annotation.Resource;
  */
 @Service("zhiweibiaoService")
 public class ZhiweibiaoServiceImpl implements ZhiweibiaoService {
-
+    @Resource
+    private ZhiweibiaoDao zhiweibiaoDao;
+    @Override
+    public List<Zhiweibiao> selectBatchById(int bmbh) {
+        return zhiweibiaoDao.selBatchbyid(bmbh);
+    }
 }

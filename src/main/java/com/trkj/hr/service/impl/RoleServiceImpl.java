@@ -1,6 +1,9 @@
 package com.trkj.hr.service.impl;
 
+import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
+import com.trkj.hr.mapper.MenuDao;
 import com.trkj.hr.mapper.RoleDao;
+import com.trkj.hr.pojo.Menu;
 import com.trkj.hr.pojo.Role;
 import com.trkj.hr.service.RoleService;
 import com.trkj.hr.vo.AjaxResponse;
@@ -36,5 +39,4 @@ public class RoleServiceImpl implements RoleService {
     public int delectRole(int role_id) {
         return roleDao.deleteById(role_id);
     }
-
 }
