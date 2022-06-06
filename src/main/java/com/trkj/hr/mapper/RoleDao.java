@@ -11,4 +11,5 @@ import java.util.List;
 public interface RoleDao extends BaseMapper<Role> {
     @Select("select r.role_name from role r left join yg_role yr on r.role_id=yr.role_id left join yuangongbiao y on yr.ybh=y.ybh where y.yzh=#{yzh} and r.isuse=0")
     List<String> findRoleByusername(@Param("yzh") String yzh);
+
 }

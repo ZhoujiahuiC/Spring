@@ -1,6 +1,7 @@
 package com.trkj.hr.controller;
 
 import com.trkj.hr.mapper.YuangongbiaoDao;
+import com.trkj.hr.pojo.Role;
 import com.trkj.hr.pojo.Yuangongbiao;
 import com.trkj.hr.service.YuangongbiaoService;
 import com.trkj.hr.vo.AjaxResponse;
@@ -36,13 +37,18 @@ public class YuangongbiaoController {
         return AjaxResponse.success(yuangongbiaoService.updateygzt(ybh));
     }
 
-    @GetMapping("/selEmpSb")
+    @GetMapping("/selEmpSb1")
     @PreAuthorize("hasAuthority('/staffManagement')")
     public AjaxResponse selEmpSb(int pageNum,int pageSize,String rzname,String sbmc){
         System.out.println(1111111);
         log.debug("lll{}",yuangongbiaoService.selPageAllEmpSb(pageNum, pageSize,rzname,sbmc));
         System.out.println(1111111);
         return AjaxResponse.success(yuangongbiaoService.selPageAllEmpSb(pageNum, pageSize,rzname,sbmc));
+    }
+    @GetMapping("/selectListYg")
+    @PreAuthorize("hasAuthority('/authorityManagement')")
+    public AjaxResponse selectListYg(int role_id){
+        return AjaxResponse.success(yuangongbiaoService.selectListYg(role_id));
     }
 }
 

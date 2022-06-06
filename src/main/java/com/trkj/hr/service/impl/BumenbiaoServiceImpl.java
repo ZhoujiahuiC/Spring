@@ -50,6 +50,7 @@ public class BumenbiaoServiceImpl implements BumenbiaoService {
         return bumenbiaoDao.updateById(bumenbiao);
     }
     //查询所有的部门名称
+
     @Override
     public List<Bumenbiao> selectbmmc() {
         List<Bumenbiao> bumenbiaoList = bumenbiaoDao.selectList(null);

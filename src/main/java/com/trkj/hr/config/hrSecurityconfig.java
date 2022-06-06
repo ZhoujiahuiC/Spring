@@ -29,7 +29,9 @@ import java.util.List;
 @Configuration
 @EnableWebSecurity
 @EnableGlobalMethodSecurity(prePostEnabled = true)
-public class hrSecurityconfig extends WebSecurityConfigurerAdapter {
+public class
+
+hrSecurityconfig extends WebSecurityConfigurerAdapter {
     @Resource
     private UserDetailsServiceImpl userDetailsService;
     @Autowired
