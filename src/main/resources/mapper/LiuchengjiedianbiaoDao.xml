@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.trkj.hr.mapper.LiuchengjiedianbiaoDao">
+    <resultMap id="BaseResultMap" type="com.trkj.hr.pojo.Liuchengjiedianbiao">
+        <id column="nodeid" jdbcType="INTEGER" property="nodeid"/>
+        <result column="workid" property="workid" jdbcType="INTEGER"/>
+        <result column="nodename" property="nodename" jdbcType="VARCHAR"/>
+    </resultMap>
+    <select id="jiedianxx" resultType="com.trkj.hr.vo.JiedianxxVo">
+        select  b.workid,b.nodeid,b.nodename,c.ybh
+            from  liuchengjiedianbiao as b inner join liuchengrenyuan as c
+            on  b.nodeid=c.nodeid
+        where b.workid=#{workid}
+    </select>
+
+
+
+</mapper>

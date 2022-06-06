@@ -11,7 +11,8 @@ public class LiuchengjiedianbiaoController {
     @Autowired
     private LiuchengjiedianbiaoService liuchengjiedianbiaoService;
     @GetMapping("/liuchengjiedianbiao")
-    public AjaxResponse selectAll(){
-        return AjaxResponse.success(liuchengjiedianbiaoService.jiedianbiao());
+    public AjaxResponse jiedianxx(int workid){
+        return AjaxResponse.success(liuchengjiedianbiaoService.jiedianxx(workid));
     }
+
 }

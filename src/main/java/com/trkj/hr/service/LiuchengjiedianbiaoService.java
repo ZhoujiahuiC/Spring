@@ -1,9 +1,9 @@
 package com.trkj.hr.service;
 
-import com.trkj.hr.pojo.Liuchengjiedianbiao;
+import com.trkj.hr.vo.JiedianxxVo;
 
 import java.util.List;
 
 public interface LiuchengjiedianbiaoService {
-    List<Liuchengjiedianbiao> jiedianbiao();
+    List<JiedianxxVo> jiedianxx(int workid);
 }

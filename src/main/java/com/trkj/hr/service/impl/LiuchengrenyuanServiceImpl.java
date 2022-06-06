@@ -16,4 +16,17 @@ public class LiuchengrenyuanServiceImpl implements LiuchengrenyuanService {
     public List<Liuchengrenyuan> renyuan(){
         return liuchengrenyuanDao.selectList(null);
     }
+
+    @Override
+    public int updataxx(Integer ybh ,Integer nodeid) {
+        Liuchengrenyuan liuchengrenyuan = new Liuchengrenyuan();
+        System.out.println(ybh);
+        System.out.println(nodeid);
+        liuchengrenyuan.setYbh(ybh);
+        liuchengrenyuan.setNodeid(nodeid);
+        return liuchengrenyuanDao.updateById(liuchengrenyuan);
+
+//        LambdaUpdateWrapper<Liuchengrenyuan> lambdaUpdateWrapper = new LambdaUpdateWrapper<>();
+
+    }
 }
