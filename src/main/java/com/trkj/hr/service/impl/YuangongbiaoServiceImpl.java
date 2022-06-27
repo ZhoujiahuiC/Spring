@@ -138,7 +138,6 @@ public class YuangongbiaoServiceImpl implements YuangongbiaoService {
     public List<YgybVo> selYb(int pageNum,int pageSize) throws ParseException {
         List<YgybVo> ygybVoList=new ArrayList<>();
         SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM");
-
         String format = simpleDateFormat.format(new Date());
         log.debug("farmat:{}",format);
         Date parse = simpleDateFormat.parse(format);
