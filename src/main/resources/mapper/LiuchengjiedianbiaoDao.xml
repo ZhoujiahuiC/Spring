@@ -8,9 +8,11 @@
         <result column="nodename" property="nodename" jdbcType="VARCHAR"/>
     </resultMap>
     <select id="jiedianxx" resultType="com.trkj.hr.vo.JiedianxxVo">
-        select  b.workid,b.nodeid,b.nodename,c.ybh
-            from  liuchengjiedianbiao as b inner join liuchengrenyuan as c
-            on  b.nodeid=c.nodeid
+        select  b.workid,a.workzt,b.nodeid,b.nodename,b.ybh,r.rzbh,r.rzname
+        from  liuchengjiedianbiao as b
+                  inner join liuchengbiao as a on a.workid= b.workid
+                  LEFT JOIN yuangongbiao c on b.ybh=c.ybh
+                  LEFT JOIN rencaizibiao r on c.rzbh=r.rzbh
         where b.workid=#{workid}
     </select>
 

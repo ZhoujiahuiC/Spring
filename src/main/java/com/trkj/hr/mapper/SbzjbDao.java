@@ -16,6 +16,7 @@ import java.util.List;
  */
 @Mapper
 public interface SbzjbDao extends BaseMapper<Sbzjb> {
+    List<Sbzjb> selectSbjs(Integer sbbh);
 
 
 }

@@ -1,5 +1,6 @@
 package com.trkj.hr.service.impl;
 
+import com.baomidou.mybatisplus.core.conditions.update.LambdaUpdateWrapper;
 import com.trkj.hr.mapper.LiuchengrenyuanDao;
 import com.trkj.hr.pojo.Liuchengrenyuan;
 import com.trkj.hr.service.LiuchengrenyuanService;
@@ -17,16 +18,5 @@ public class LiuchengrenyuanServiceImpl implements LiuchengrenyuanService {
         return liuchengrenyuanDao.selectList(null);
     }
 
-    @Override
-    public int updataxx(Integer ybh ,Integer nodeid) {
-        Liuchengrenyuan liuchengrenyuan = new Liuchengrenyuan();
-        System.out.println(ybh);
-        System.out.println(nodeid);
-        liuchengrenyuan.setYbh(ybh);
-        liuchengrenyuan.setNodeid(nodeid);
-        return liuchengrenyuanDao.updateById(liuchengrenyuan);
 
-//        LambdaUpdateWrapper<Liuchengrenyuan> lambdaUpdateWrapper = new LambdaUpdateWrapper<>();
-
-    }
 }

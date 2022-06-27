@@ -1,13 +1,13 @@
 package com.trkj.hr.pojo;
 
+import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.Data;
-import org.springframework.format.annotation.DateTimeFormat;
 
 import java.util.Date;
-import java.io.Serializable;
+
 
 /**
  * (Zhiweibiao)实体类
@@ -16,8 +16,8 @@ import java.io.Serializable;
  * @since 2022-04-26 19:40:43
  */
 @Data
-public class Zhiweibiao implements Serializable {
-    @TableId
+public class Zhiweibiao {
+    @TableId(type = IdType.AUTO)
     private Integer zwbh;
 
     private Integer bmbh;

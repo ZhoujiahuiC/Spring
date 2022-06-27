@@ -12,4 +12,9 @@ import org.springframework.data.domain.PageRequest;
  */
 public interface MianshiguizhanzibiaoService {
 
+    int addMsgzz(Mianshiguizhanzibiao mianshiguizhanzibiao);
+
+    int updateMsgzz(Mianshiguizhanzibiao mianshiguizhanzibiao);
+
+    int delMsgzz(int mzbh);
 }

@@ -11,12 +11,7 @@ import java.util.Date;
 public class BumenJbgzb {
 
     private Integer bmbh;
-
     private String bmmc;
-
-    private String bmjs;
-    @JsonFormat(pattern = "yyyy-MM-dd",timezone = "GMT+8")
-    private Date bmsj;
 
     private Integer zwbh;
 

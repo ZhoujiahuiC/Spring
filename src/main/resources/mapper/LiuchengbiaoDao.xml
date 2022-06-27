@@ -10,11 +10,11 @@
     </resultMap>
 
     <select id="selectxx" resultType="com.trkj.hr.vo.LiuchengxxVo">
-        select  a.workid,b.nodeid,b.nodename,c.appid,c.ybh
-            from liuchengbiao as a inner join liuchengjiedianbiao as b
-                    inner join liuchengrenyuan as c
-                    on a.workid= b.workid and b.nodeid=c.nodeid
-            where a.workid=#{workid}
+        select  b.workid,b.nodeid,b.nodename,b.ybh,r.rzbh,r.rzname
+        from liuchengjiedianbiao as b
+                 LEFT JOIN yuangongbiao c on b.ybh=c.ybh
+                 LEFT JOIN rencaizibiao r on c.rzbh=r.rzbh
+        where b.workid=#{workid}
     </select>
 
 </mapper>

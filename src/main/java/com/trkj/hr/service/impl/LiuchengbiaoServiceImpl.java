@@ -43,5 +43,17 @@ public class LiuchengbiaoServiceImpl implements LiuchengbiaoService {
         return liuchengbiaoDao.deleteById(workid);
     }
 
+    @Override
+    public List<Object> selectObjs() {
+        QueryWrapper<Liuchengbiao> queryWrapper = new QueryWrapper<>();
+        queryWrapper.orderByDesc("workid").last("limit 1");
+        return liuchengbiaoDao.selectObjs(queryWrapper);
+    }
+
+    @Override
+    public int insertxx(Liuchengbiao liuchengbiao) {
+        return liuchengbiaoDao.insert(liuchengbiao);
+    }
+
 
 }

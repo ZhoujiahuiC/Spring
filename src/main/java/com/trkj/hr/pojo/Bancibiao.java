@@ -1,5 +1,9 @@
 package com.trkj.hr.pojo;
 
+import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.annotation.TableId;
+import lombok.Data;
+
 import java.util.Date;
 import java.io.Serializable;
 
@@ -9,49 +13,18 @@ import java.io.Serializable;
  * @author makejava
  * @since 2022-04-26 19:37:36
  */
-public class Bancibiao implements Serializable {
-    private static final long serialVersionUID = -82468102055496925L;
-    
+@Data
+public class Bancibiao  {
+    @TableId(type = IdType.AUTO)
     private Integer bcbh;
     
     private String bcmc;
     
-    private Date bckssj;
+    private String bckssj;
     
-    private Date bcjssj;
+    private String bcjssj;
 
-
-    public Integer getBcbh() {
-        return bcbh;
-    }
-
-    public void setBcbh(Integer bcbh) {
-        this.bcbh = bcbh;
-    }
-
-    public String getBcmc() {
-        return bcmc;
-    }
-
-    public void setBcmc(String bcmc) {
-        this.bcmc = bcmc;
-    }
-
-    public Date getBckssj() {
-        return bckssj;
-    }
-
-    public void setBckssj(Date bckssj) {
-        this.bckssj = bckssj;
-    }
-
-    public Date getBcjssj() {
-        return bcjssj;
-    }
-
-    public void setBcjssj(Date bcjssj) {
-        this.bcjssj = bcjssj;
-    }
+    private int num;
 
 }
 

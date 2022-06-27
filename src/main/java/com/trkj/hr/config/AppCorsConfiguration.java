@@ -23,7 +23,7 @@ public class AppCorsConfiguration {
         appCorsConfiguration.addAllowedOrigin("*");
       //  appCorsConfiguration.addAllowedOrigin("http://127.0.0.1:8088");
         appCorsConfiguration.addAllowedHeader("*"); // 2允许任何头
-        appCorsConfiguration.addAllowedHeader("jwtAuth");
+        appCorsConfiguration.addAllowedHeader("token");
         // 允许的请求的方法
         appCorsConfiguration.addAllowedMethod("OPTIONS");
         appCorsConfiguration.addAllowedMethod("HEAD");

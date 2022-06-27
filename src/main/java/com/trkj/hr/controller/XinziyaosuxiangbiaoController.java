@@ -25,16 +25,34 @@ import java.util.List;
 public class XinziyaosuxiangbiaoController {
     @Autowired
     private XinziyaosuxiangbiaoService xinziyaosuxiangbiaoService;
-    //    查询所有薪资要素项
+//    查询所有薪资要素项
     @GetMapping("/selAllxzys")
-    @PreAuthorize("hasAuthority('/salaryAdministration')")
-    public AjaxResponse selAllxzys(){
-        return AjaxResponse.success(xinziyaosuxiangbiaoService.selAllxzys());
+    @PreAuthorize("hasAuthority('/divisionManagement')")
+    public AjaxResponse selAllxzys(int pageNum,int pageSize,String xzysmc){
+        return AjaxResponse.success(xinziyaosuxiangbiaoService.selAllxzys(pageNum, pageSize, xzysmc));
     }
     @PutMapping("/upAllxzys")
-    @PreAuthorize("hasAuthority('/salaryAdministration')")
+    @PreAuthorize("hasAuthority('/divisionManagement')")
     public AjaxResponse upAllxzys(@RequestBody  List<Xinziyaosuxiangbiao> list){
         log.debug("list:{}",list);
         return AjaxResponse.success(xinziyaosuxiangbiaoService.upxzysje(list));
+    }
+//    添加薪资要素项
+    @PostMapping("/addxzysx")
+    @PreAuthorize("hasAuthority('/divisionManagement')")
+    public AjaxResponse addxzysx(@RequestBody Xinziyaosuxiangbiao xzysx){
+        return AjaxResponse.success(xinziyaosuxiangbiaoService.addxzysx(xzysx));
+    }
+//    修改单个薪资要素项金额
+    @PutMapping("/upxzysxje")
+    @PreAuthorize("hasAuthority('/divisionManagement')")
+    public AjaxResponse upxzysxje(@RequestBody Xinziyaosuxiangbiao xinziyaosuxiangbiao){
+        return AjaxResponse.success(xinziyaosuxiangbiaoService.upxzysxje2(xinziyaosuxiangbiao));
+    }
+//    删除薪资要素项
+    @DeleteMapping("/delxzysx")
+    @PreAuthorize("hasAuthority('/divisionManagement')")
+    public AjaxResponse delxzysx(int xzysbh){
+        return AjaxResponse.success(xinziyaosuxiangbiaoService.delxzysx(xzysbh));
     }
 }

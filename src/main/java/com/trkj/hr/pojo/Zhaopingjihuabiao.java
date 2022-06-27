@@ -1,6 +1,13 @@
 package com.trkj.hr.pojo;
 
+import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.annotation.TableField;
+import com.baomidou.mybatisplus.annotation.TableId;
+import com.fasterxml.jackson.annotation.JsonFormat;
+import lombok.Data;
+
 import java.io.Serializable;
+import java.util.Date;
 
 /**
  * (Zhaopingjihuabiao)实体类
@@ -8,9 +15,9 @@ import java.io.Serializable;
  * @author makejava
  * @since 2022-04-26 19:40:43
  */
-public class Zhaopingjihuabiao implements Serializable {
-    private static final long serialVersionUID = -93333286336893673L;
-    
+@Data
+public class Zhaopingjihuabiao  {
+    @TableId(type = IdType.AUTO)
     private Integer zbh;
     
     private Integer shjlbh;
@@ -22,55 +29,19 @@ public class Zhaopingjihuabiao implements Serializable {
     private Integer zrs;
     
     private String zmc;
+    @JsonFormat(pattern = "yyyy-MM-dd",timezone = "GMT+8")
+    private Date zsj;
+
+    private Integer zzt;
+
+    private  Integer zdqrs;
+
+    private  String zjs;
+
+    @TableField(exist = false)
+    private String zwmc;
 
 
-    public Integer getZbh() {
-        return zbh;
-    }
-
-    public void setZbh(Integer zbh) {
-        this.zbh = zbh;
-    }
-
-    public Integer getShjlbh() {
-        return shjlbh;
-    }
-
-    public void setShjlbh(Integer shjlbh) {
-        this.shjlbh = shjlbh;
-    }
-
-    public Integer getShbid() {
-        return shbid;
-    }
-
-    public void setShbid(Integer shbid) {
-        this.shbid = shbid;
-    }
-
-    public Integer getZwbh() {
-        return zwbh;
-    }
-
-    public void setZwbh(Integer zwbh) {
-        this.zwbh = zwbh;
-    }
-
-    public Integer getZrs() {
-        return zrs;
-    }
-
-    public void setZrs(Integer zrs) {
-        this.zrs = zrs;
-    }
-
-    public String getZmc() {
-        return zmc;
-    }
-
-    public void setZmc(String zmc) {
-        this.zmc = zmc;
-    }
 
 }
 

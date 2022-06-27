@@ -28,4 +28,7 @@ public interface XinzijibengongzibiaoService {
     int upjbxz( Xinzijibengongzibiao xinzijibengongzibiao);
     // 添加基本工资
     int addjbxz(int zwbh,Double xzjbxz);
+
+
+    List<BumenJbgzb> selzwxz(int bmbh);
 }

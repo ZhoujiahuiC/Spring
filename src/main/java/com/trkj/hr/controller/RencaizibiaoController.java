@@ -3,6 +3,7 @@ package com.trkj.hr.controller;
 import com.trkj.hr.pojo.Rencaizibiao;
 import com.trkj.hr.service.RencaizibiaoService;
 import com.trkj.hr.vo.AjaxResponse;
+import com.trkj.hr.vo.RencaiVo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
@@ -35,5 +36,6 @@ public class RencaizibiaoController {
     public AjaxResponse upadate(@RequestBody Rencaizibiao rencaizibiao){
         return AjaxResponse.success(rencaizibiaoService.updaterenzi(rencaizibiao));
     }
+
 }
 

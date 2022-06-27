@@ -4,6 +4,8 @@ import com.trkj.hr.pojo.Xingzijilubiao;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 
+import java.util.List;
+
 /**
  * (Xingzijilubiao)表服务接口
  *
@@ -12,6 +14,7 @@ import org.springframework.data.domain.PageRequest;
  */
 public interface XingzijilubiaoService {
 
+    List<Xingzijilubiao> selAllxzjl();
 
 
 }

@@ -1,6 +1,12 @@
 package com.trkj.hr.pojo;
 
+import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.annotation.TableField;
+import com.baomidou.mybatisplus.annotation.TableId;
+import lombok.Data;
+
 import java.io.Serializable;
+import java.util.List;
 
 /**
  * (Mianshiguizhanbiao)实体类
@@ -8,9 +14,9 @@ import java.io.Serializable;
  * @author makejava
  * @since 2022-04-26 19:40:43
  */
-public class Mianshiguizhanbiao implements Serializable {
-    private static final long serialVersionUID = -21583424130320581L;
-    
+@Data
+public class Mianshiguizhanbiao  {
+    @TableId(type = IdType.AUTO)
     private Integer mbh;
     
     private Integer ybh;
@@ -18,39 +24,18 @@ public class Mianshiguizhanbiao implements Serializable {
     private Integer zwbh;
     
     private String mmc;
-
-
-    public Integer getMbh() {
-        return mbh;
-    }
-
-    public void setMbh(Integer mbh) {
-        this.mbh = mbh;
-    }
-
-    public Integer getYbh() {
-        return ybh;
-    }
-
-    public void setYbh(Integer ybh) {
-        this.ybh = ybh;
-    }
-
-    public Integer getZwbh() {
-        return zwbh;
-    }
-
-    public void setZwbh(Integer zwbh) {
-        this.zwbh = zwbh;
-    }
-
-    public String getMmc() {
-        return mmc;
-    }
-
-    public void setMmc(String mmc) {
-        this.mmc = mmc;
-    }
+    @TableField(exist = false)
+    private int total;
+    @TableField(exist = false)
+    private List<Mianshiguizhanzibiao> mianshiguizhanzibiaoList;
+    @TableField(exist = false)
+    private Zhiweibiao zhiweibiao;
+    @TableField(exist = false)
+    private Bumenbiao bumenbiao;
+    @TableField(exist = false)
+    private Yuangongbiao yuangongbiao;
+    @TableField(exist = false)
+    private Rencaizibiao rencaizibiao;
 
 }
 

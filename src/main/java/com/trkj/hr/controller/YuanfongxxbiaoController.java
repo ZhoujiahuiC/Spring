@@ -10,12 +10,12 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.Date;
 
 @RestController
-public class YuanfongxxbiaoController {
+public class  YuanfongxxbiaoController {
     @Autowired
     private YuangongxxbiaoService yuangongxxbiaoService;
     //根据id查询个人信息
     @GetMapping("/selectygxx")
-    @PreAuthorize("hasAuthority('/staffManagement')")
+    @PreAuthorize("hasAuthority('/staff')")
     public AjaxResponse selectall(int ybh){
         return AjaxResponse.success(yuangongxxbiaoService.selctyuangongbiao(ybh));
     }

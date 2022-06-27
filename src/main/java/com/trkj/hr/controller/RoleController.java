@@ -1,5 +1,6 @@
 package com.trkj.hr.controller;
 
+import com.alibaba.fastjson.JSON;
 import com.trkj.hr.pojo.Role;
 import com.trkj.hr.service.RoleService;
 import com.trkj.hr.vo.AjaxResponse;
@@ -26,8 +27,8 @@ public class RoleController {
     }
     @PostMapping("insertRole")
     @PreAuthorize("hasAuthority('/authorityManagement')")
-    public AjaxResponse insertRole(@RequestBody Role role){
-        log.debug("Role:{}",role);
+    public AjaxResponse insertRole( Role role){
+        log.debug("Role:{}", role);
         return AjaxResponse.success(roleService.insertRole(role));
     }
     @DeleteMapping("electRole")

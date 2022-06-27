@@ -31,6 +31,10 @@ public interface XinzijibengongzibiaoDao extends BaseMapper<BumenJbgzb> {
     //    分页条件查询所有部门职位的基本工资
     @Select("SELECT * FROM xinzijibengongzibiao x LEFT JOIN zhiweibiao z on x.zwbh=z.zwbh LEFT JOIN bumenbiao b on z.bmbh=b.bmbh ${ew.customSqlSegment} ")
     IPage<BumenJbgzb> selPageOfjbgz (Page<BumenJbgzb> page, @Param(Constants.WRAPPER) QueryWrapper<BumenJbgzb> queryWrapper);
-
+    @Select("select * from xinzijibengongzibiao ${ew.customSqlSegment}")
+    Xinzijibengongzibiao selectXinzi(@Param(Constants.WRAPPER) QueryWrapper<Xinzijibengongzibiao> queryWrapper);
+    @Select("SELECT b.bmbh,b.bmmc,z.zwmc,z.zwjs,z.zwsj,x.zwbh,x.xzjbbh,x.shbid,x.shjlbh,x.xzjbgz from xinzijibengongzibiao x LEFT JOIN zhiweibiao z on x.zwbh=z.zwbh\n" +
+            "LEFT JOIN bumenbiao b on z.bmbh= b.bmbh where b.bmbh =#{bmbh}")
+    List<BumenJbgzb> selzwxz(@Param("bmbh") int bmbh);
 }
 

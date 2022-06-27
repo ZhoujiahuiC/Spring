@@ -4,22 +4,22 @@ import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.core.toolkit.CollectionUtils;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
-import com.trkj.hr.mapper.Yg_RoleDao;
-import com.trkj.hr.mapper.YuangonVoDao;
-import com.trkj.hr.pojo.Menu;
-import com.trkj.hr.pojo.Yg_Role;
-import com.trkj.hr.pojo.Yuangongbiao;
-import com.trkj.hr.mapper.YuangongbiaoDao;
+import com.trkj.hr.mapper.*;
+import com.trkj.hr.pojo.*;
 import com.trkj.hr.service.MenuService;
 import com.trkj.hr.service.YuangongbiaoService;
 import com.trkj.hr.util.RedisUtil;
-import com.trkj.hr.vo.AjaxResponse;
-import com.trkj.hr.vo.YuangonVo;
-import com.trkj.hr.vo.Yuangongbiaovo;
+import com.trkj.hr.vo.*;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Date;
 import java.util.List;
 
 
@@ -42,6 +42,12 @@ public class YuangongbiaoServiceImpl implements YuangongbiaoService {
     private YuangonVoDao yuangonVoDao;
     @Autowired
     private Yg_RoleDao yg_roleDao;
+    @Autowired
+    private ZhiweibiaoDao zhiweibiaoDao;
+    @Autowired
+    private BumenbiaoDao bumenbiaoDao;
+    @Autowired
+    private RencaizibiaoDao rencaizibiaoDao;
     @Autowired
     private RedisUtil redisUtil;
     @Override
@@ -117,4 +123,70 @@ public class YuangongbiaoServiceImpl implements YuangongbiaoService {
         yuangongbiao.setIscb(1);
         return yuangongbiaoDao.upEmpcbfa(ybh,sbbh);
     }
+    //修改员工基本工资
+    @Override
+    public int upygjbgz(Yuangongbiao yuangongbiao) {
+        return yuangongbiaoDao.updateById(yuangongbiao);
+    }
+
+    @Override
+    public List<YuangongxxVo> selectxx() {
+        return yuangongbiaoDao.selectxx();
+    }
+
+    @Override
+    public List<YgybVo> selYb(int pageNum,int pageSize) throws ParseException {
+        List<YgybVo> ygybVoList=new ArrayList<>();
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM");
+
+        String format = simpleDateFormat.format(new Date());
+        log.debug("farmat:{}",format);
+        Date parse = simpleDateFormat.parse(format);
+        Calendar instance = Calendar.getInstance();
+        instance.setTime(parse);
+        instance.add(Calendar.MONTH,-1);
+        parse=instance.getTime();
+        List<Yuangongbiao> yuangongbiaos = yuangongbiaoDao.selectList(null);
+        for (Yuangongbiao y :yuangongbiaos) {
+            QueryWrapper<YgybVo> ygybVoQueryWrapper=new QueryWrapper<>();
+            Date finalParse = parse;
+            ygybVoQueryWrapper.eq("ybh",y.getYbh()).and(e->e.like("xzsj", "2022-05"));
+            YgybVo ygybVo = yuangongbiaoDao.selYbcc(ygybVoQueryWrapper);
+            ygybVo.setYbh(y.getYbh());
+            QueryWrapper<Rencaizibiao> rencaizibiaoQueryWrapper=new QueryWrapper<>();
+            rencaizibiaoQueryWrapper.eq("rzbh",y.getRzbh());
+            Rencaizibiao rencaizibiao = rencaizibiaoDao.selectOne(rencaizibiaoQueryWrapper);
+            ygybVo.setRzname(rencaizibiao.getRzname());
+            QueryWrapper<Bumenbiao> bumenbiaoQueryWrapper=new QueryWrapper<>();
+            bumenbiaoQueryWrapper.eq("bmbh",rencaizibiao.getBmbh());
+            Bumenbiao bumenbiao = bumenbiaoDao.selectOne(bumenbiaoQueryWrapper);
+            ygybVo.setBmmc(bumenbiao.getBmmc());
+            ygybVo.setTotal(yuangongbiaos.size());
+            ygybVo.setSjcq(ygybVo.getZc()+ygybVo.getCd()+ygybVo.getZt()+ygybVo.getCc());
+            ygybVoList.add(ygybVo);
+        }
+        List<YgybVo> ygybVoList1=new ArrayList<>();
+        for(int i=(pageNum-1)*pageSize;i<(pageNum-1)*pageSize+pageSize;i++){
+            if(i<ygybVoList.size()){
+                ygybVoList1.add(ygybVoList.get(i));
+            }
+        }
+        return ygybVoList1;
+    }
+
+    @Override
+    public List<YuangongxxVo> selectxxId(int ybh) {
+        return yuangongbiaoDao.selectxxId(ybh);
+    }
+
+    @Override
+    public List<Yuangongx1Vo> selectx1Id(int ybh) {
+        return yuangongbiaoDao.selectx1Id(ybh);
+    }
+
+    @Override
+    public List<Yuangongx1Vo> selectx2Id(int bmbh, int ybh) {
+        return yuangongbiaoDao.selectx2Id(bmbh,ybh);
+    }
+
 }

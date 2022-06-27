@@ -6,7 +6,7 @@ import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.Data;
 
 import java.util.Date;
-import java.io.Serializable;
+
 
 /**
  * (Gonggaobiao)实体类
@@ -23,12 +23,14 @@ public class Gonggaobiao {
 
     private String ggname;
 
+    private String gglx;
+
     private String ggzt;
     
     private String ggnr;
-    
+    @JsonFormat(pattern="yyyy-MM-dd",timezone = "GMT+8")
     private Date ggksrq;
-
+    @JsonFormat(pattern="yyyy-MM-dd",timezone = "GMT+8")
     private Date ggjsrq;
     @JsonFormat(pattern="yyyy-MM-dd",timezone = "GMT+8")
     private Date ggfbsj;

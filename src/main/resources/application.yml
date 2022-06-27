@@ -10,7 +10,7 @@ spring:
     #password: sys2021
     #driver-class-name: oracle.jdbc.driver.OracleDriver
     #mysql配置如下：
-    url: jdbc:mysql://127.0.0.1:3306/xmk?useUnicode=true&characterEncoding=UTF-8&allowPublicKeyRetrieval=true&useSSL=false&serverTimezone=GMT%2B8
+    url: jdbc:mysql://127.0.0.1:3306/xmk?useUnicode=true&characterEncoding=UTF-8&allowPublicKeyRetrieval=true&useSSL=false&serverTimezone=GMT%2B8&allowMultiQueries=true
     username: root
     password: 123456
     driver-class-name: com.mysql.cj.jdbc.Driver
@@ -28,7 +28,7 @@ jwt:
   # Token前缀字符
   tokenPrefix: Security-c
   # 过期时间毫秒
-  expire: 60000000
+  expire: 100000000
 mybatis-plus:
   configuration:
     map-underscore-to-camel-case: false

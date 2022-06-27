@@ -49,5 +49,15 @@ public class BumenbiaoController {
 
         return AjaxResponse.success(bumenbiaoService.selectbmmc());
     }
+    @PreAuthorize("hasAuthority('/divisionManagement')")
+    @GetMapping("/selDept")
+    public AjaxResponse selAll(){
+        return AjaxResponse.success(bumenbiaoService.selAll());
+    }
+    @GetMapping("/selnocbyg")
+    @PreAuthorize("hasAuthority('/divisionManagement')")
+    public AjaxResponse selnocbyg(){
+        return AjaxResponse.success(bumenbiaoService.selBumen2());
+    }
 }
 

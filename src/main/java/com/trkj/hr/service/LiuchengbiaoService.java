@@ -11,4 +11,6 @@ public interface LiuchengbiaoService {
     List<LiuchengxxVo> selectxx(int workid);
     List<Liuchengbiao> selectliu(String workname);
     int deleteById(int workid);
+    List<Object> selectObjs();
+    int insertxx(Liuchengbiao liuchengbiao);
 }

@@ -40,9 +40,9 @@ public class ShebaofananbiaoController {
     }
 
 //    社保方案单个删除
-    @DeleteMapping("/deleteSb/{sbbh}")
+    @DeleteMapping("/deleteSb")
     @PreAuthorize("hasAuthority('/attendanceManagement')")
-    public AjaxResponse deleteOne(@PathVariable int sbbh){
+    public AjaxResponse deleteOne( int sbbh){
         return AjaxResponse.success(shebaofananbiaoService.deleteById(sbbh));
     }
 //    批量删除社保方案
@@ -73,6 +73,12 @@ public class ShebaofananbiaoController {
         System.out.println(shebaofananbiao);
         return  AjaxResponse.success(shebaofananbiaoService.addSbfan(shebaofananbiao));
 
+    }
+//       修改社保方案
+    @PutMapping("/upSbfa")
+    @PreAuthorize("hasAuthority('/attendanceManagement')")
+    public AjaxResponse upSbfa(@RequestBody Shebaofananbiao shebaofananbiao){
+        return AjaxResponse.success(shebaofananbiaoService.upShebao(shebaofananbiao));
     }
 }
 

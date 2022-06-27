@@ -35,5 +35,7 @@ public class RencaizibiaoServiceImpl implements RencaizibiaoService {
         return rencaizibiaoDao.updateById(rencaizibiao);
     }
 
+//   添加人才
+
 
 }

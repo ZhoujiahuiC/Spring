@@ -56,6 +56,12 @@ public class XinzijibengongzibiaoServiceImpl implements XinzijibengongzibiaoServ
         xinzijibengongzibiao.setXzjbgz(xzjbxz);
         return jibengongzibiaoDao.insert(xinzijibengongzibiao);
     }
+    @Override
+    public List<BumenJbgzb> selzwxz(int bmbh) {
+        List<BumenJbgzb> selzwxz = xinzijibengongzibiaoDao.selzwxz(bmbh);
+        return selzwxz;
+    }
+
 
 
 }

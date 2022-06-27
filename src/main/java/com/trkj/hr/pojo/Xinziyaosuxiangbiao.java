@@ -1,5 +1,6 @@
 package com.trkj.hr.pojo;
 
+import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableId;
 import lombok.Data;
 
@@ -13,11 +14,9 @@ import java.io.Serializable;
  */
 @Data
 public class Xinziyaosuxiangbiao implements Serializable {
-    @TableId
+    @TableId(type = IdType.AUTO)
     private Integer xzysbh;
-
     private String xzysmc;
-
     private Float xzysje;
 
 

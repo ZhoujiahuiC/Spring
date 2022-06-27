@@ -8,4 +8,6 @@ public class LiuchengxxVo {
     private Integer nodeid;
     private String nodename;
     private Integer ybh;
+    private Integer rzby;
+    private String rzname;
 }

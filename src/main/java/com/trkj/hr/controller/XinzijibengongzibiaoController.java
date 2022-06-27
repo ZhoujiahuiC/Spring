@@ -27,18 +27,23 @@ public class XinzijibengongzibiaoController {
     private XinzijibengongzibiaoService xinzijibengongzibiaoService;
     //       分页条件查询所有部门职位的基本工资
     @GetMapping("/selAllOfjbxz")
-    @PreAuthorize("hasAuthority('/salaryAdministration')")
+    @PreAuthorize("hasAuthority('/divisionManagement')")
     public AjaxResponse selAllOfjbxz(Integer pageNum,Integer pageSize,String bmmc,String zwmc){
         return AjaxResponse.success(xinzijibengongzibiaoService.selAllOfjbgz(pageNum, pageSize, bmmc, zwmc));
     }
     @PutMapping("/upjbxz")
-    @PreAuthorize("hasAuthority('/salaryAdministration')")
+    @PreAuthorize("hasAuthority('/divisionManagement')")
     public AjaxResponse upjbxz(@RequestBody Xinzijibengongzibiao x){
         return AjaxResponse.success(xinzijibengongzibiaoService.upjbxz(x));
     }
     @PostMapping("/addjbxz")
-    @PreAuthorize("hasAuthority('/salaryAdministration')")
+    @PreAuthorize("hasAuthority('/divisionManagement')")
     public AjaxResponse addjbxz( int zwbh, Double xzjbxz ){
         return AjaxResponse.success(xinzijibengongzibiaoService.addjbxz(zwbh, xzjbxz));
+    }
+    @GetMapping("/selzwxz")
+    @PreAuthorize("hasAuthority('/divisionManagement')")
+    public AjaxResponse selzwxz(int bmbh){
+        return AjaxResponse.success(xinzijibengongzibiaoService.selzwxz(bmbh));
     }
 }

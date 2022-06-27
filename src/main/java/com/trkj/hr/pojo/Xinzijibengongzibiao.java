@@ -17,13 +17,13 @@ import java.io.Serializable;
 public class Xinzijibengongzibiao  {
     @TableId(type= IdType.AUTO)
     private Integer xzjbbh;
-
+    
     private Integer zwbh;
-
+    
     private Integer shbid;
-
+    
     private Integer shjlbh;
-
+    
     private Double xzjbgz;
 }
 

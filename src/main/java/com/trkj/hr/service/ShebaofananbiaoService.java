@@ -5,7 +5,7 @@ import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.trkj.hr.pojo.Jixiaodinjibiao;
 import com.trkj.hr.pojo.Shebaofananbiao;
 import com.trkj.hr.pojo.Shebaojishubiao;
-
+import com.trkj.hr.vo.ShebaofananVo;
 import org.apache.ibatis.annotations.Param;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
@@ -37,4 +37,6 @@ public interface ShebaofananbiaoService  {
     int addSbfan(Shebaofananbiao shebaofananbiao);
     //查询社保方案详情mybatils-puls
     Shebaofananbiao selSbxq1(int sbbh);
+//    修改社保方案
+    int upShebao(Shebaofananbiao shebaofananbiao);
 }

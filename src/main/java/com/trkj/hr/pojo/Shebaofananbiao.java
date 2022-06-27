@@ -21,16 +21,18 @@ public class Shebaofananbiao  {
 //    @TableId(type = IdType.AUTO)
     @TableId(type = IdType.AUTO)
     private Integer sbbh;
-    
+
     private Integer shjlbh;
-    
+
     private Integer shbid;
-    
+
     private String sbmc;
 
     private Integer  isuse;
 
     @TableField("false")
     private List<Shebaojishubiao> js;
+    @TableField("false")
+    private List<Integer> sbjs;
 }
 

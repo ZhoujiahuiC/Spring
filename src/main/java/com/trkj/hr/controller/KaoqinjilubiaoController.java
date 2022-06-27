@@ -29,31 +29,31 @@ public class KaoqinjilubiaoController {
     private KaoqinjilubiaoService kaoqinjilubiaoService;
     //添加上班打卡记录
     @PostMapping("/addkaoqin")
-    @PreAuthorize("hasAuthority('/attendanceManagement')")
+    @PreAuthorize("hasAnyAuthority({'/attendanceManagement','/staff'})")
     public AjaxResponse add(@RequestBody  Kaoqinjilubiao kaoqinjilubiao){
         return AjaxResponse.success(kaoqinjilubiaoService.addkq(kaoqinjilubiao));
     }
     //根据当前的特殊字段查询
     @GetMapping("/selectkaoqin")
-    @PreAuthorize("hasAuthority('/attendanceManagement')")
+    @PreAuthorize("hasAnyAuthority({'/attendanceManagement','/staff'})")
     public AjaxResponse select(String s){
         return AjaxResponse.success(kaoqinjilubiaoService.selectkaoqin( s));
     }
     //提前下班打卡修改
     @GetMapping("/updatkaoqin")
-    @PreAuthorize("hasAuthority('/attendanceManagement')")
+    @PreAuthorize("hasAnyAuthority({'/attendanceManagement','/staff'})")
     public AjaxResponse update( String kqcx){
         return AjaxResponse.success(kaoqinjilubiaoService.updatekq(kqcx));
     }
     //正常下班打卡修改
     @GetMapping("/updatkaoqin1")
-    @PreAuthorize("hasAuthority('/attendanceManagement')")
+    @PreAuthorize("hasAnyAuthority({'/attendanceManagement','/staff'})")
     //根据ybh查询员工的考勤记录
     public AjaxResponse update1( String kqcx ){
         return AjaxResponse.success(kaoqinjilubiaoService.updatekq1(kqcx));
     }
     @GetMapping("selectkq")
-    @PreAuthorize("hasAuthority('/attendanceManagement')")
+    @PreAuthorize("hasAnyAuthority({'/attendanceManagement','/staff'})")
     public AjaxResponse selectkq(int ybh){
         return AjaxResponse.success(kaoqinjilubiaoService.selectkq(ybh));
     }

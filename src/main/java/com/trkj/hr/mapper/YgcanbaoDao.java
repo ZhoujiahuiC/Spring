@@ -34,7 +34,7 @@ public interface YgcanbaoDao extends BaseMapper<YgcanbaoVo> {
 
     //查询未参保人员
     @Select("SELECT  * from yuangongbiao y\n" +
-            " LEFT JOIN rencaizibiao r on y.ybh=r.rzbh  where y.iscb=0")
+            " LEFT JOIN rencaizibiao r on y.rzbh=r.rzbh  where y.iscb=0 and y.ygzt=1")
     List<YgcanbaoVo> nocbyg();
 
 //    添加员工参保

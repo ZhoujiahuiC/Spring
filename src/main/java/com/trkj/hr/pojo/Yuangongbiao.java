@@ -45,6 +45,11 @@ public class Yuangongbiao  implements UserDetails {
     private String ymm;
     @JsonFormat(pattern="yyyy-MM-dd",timezone = "GMT+8")
     private Date ygrzrq;
+    private Double xzjbgz;
+    private int iscb;
+    private Integer nsbbh;
+    @TableField(exist = false)
+    private List<Xinzizhongjianbiao> xinzizhongjianbiaoList;
     @TableField("false")
     private Rencaizibiao rencaizibiao;
     @TableField("false")
@@ -184,6 +189,5 @@ public class Yuangongbiao  implements UserDetails {
     private Integer ylz;
     @TableField("false")
     private Boolean disabled;
-    private int iscb;
 }
 

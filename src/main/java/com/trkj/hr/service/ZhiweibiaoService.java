@@ -1,8 +1,6 @@
 package com.trkj.hr.service;
 
 import com.trkj.hr.pojo.Zhiweibiao;
-import org.springframework.data.domain.Page;
-import org.springframework.data.domain.PageRequest;
 
 import java.util.List;
 
@@ -14,5 +12,12 @@ import java.util.List;
  */
 public interface ZhiweibiaoService {
     List<Zhiweibiao> selectBatchById(int bmbh);
+    //根据部门编号添加职位
+    int addzhiwei(Zhiweibiao zhiweibiao);
+    //根据id删除
+    int deletezhiwei(int zwbh);
+    //根据id修改职位
+    int updatezhiwei(Zhiweibiao zhiweibiao);
 
+    List<Zhiweibiao> selZw(int bmbh);
 }
